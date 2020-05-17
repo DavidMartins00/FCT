@@ -30,6 +30,11 @@ class UserController extends Controller
         //
     }
 
+    public function login()
+    {
+        
+    }
+
     /**
      * Store a newly created resource in storage.
      *
