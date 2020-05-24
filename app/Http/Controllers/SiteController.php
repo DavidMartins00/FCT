@@ -20,4 +20,9 @@ class SiteController extends Controller
     {
         return view('site/func');
     }
+
+    public function index()
+    {
+        return view('site/index');
+    }
 }
