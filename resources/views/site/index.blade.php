@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-<title>Scenic HTML Template</title>
+<title>Duarte Comunicações</title>
 
 <!--
 
@@ -47,7 +47,7 @@ http://www.tooplate.com/view/2099-scenic
                     <span class="icon icon-bar"></span>
                </button>
                <!-- lOGO -->
-               <a href="index.blade.php" class="navbar-brand">Scenic</a>
+               <a href="index.blade.php" class="navbar-brand" ></a>
           </div>
 
           <!-- MENU LINKS -->
