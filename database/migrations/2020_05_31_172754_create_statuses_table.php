@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSubstitutosTable extends Migration
+class CreateStatusesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,9 @@ class CreateSubstitutosTable extends Migration
      */
     public function up()
     {
-        Schema::create('substitutos', function (Blueprint $table) {
+        Schema::create('statuses', function (Blueprint $table) {
             $table->id();
-
-            $table->string('marca');
-            $table->string('modelo');
-            $table->integer('imei');
-
+            $table->string('status');
             $table->timestamps();
         });
     }
@@ -31,6 +27,6 @@ class CreateSubstitutosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('substitutos');
+        Schema::dropIfExists('statuses');
     }
 }

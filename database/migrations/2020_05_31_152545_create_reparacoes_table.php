@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSubstitutosTable extends Migration
+class CreateReparacoesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,19 @@ class CreateSubstitutosTable extends Migration
      */
     public function up()
     {
-        Schema::create('substitutos', function (Blueprint $table) {
+        Schema::create('reparacoes', function (Blueprint $table) {
             $table->id();
 
+            $table->string('nome');
+            $table->integer('idCliente');
+            $table->integer('contacto');
             $table->string('marca');
             $table->string('modelo');
             $table->integer('imei');
+            $table->integer('idStatus');
+            $table->date('data');
+            $table->double('valor');
+            $table->integer('idRepExt');
 
             $table->timestamps();
         });
@@ -31,6 +38,6 @@ class CreateSubstitutosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('substitutos');
+        Schema::dropIfExists('reparacoes');
     }
 }

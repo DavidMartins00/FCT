@@ -28,6 +28,10 @@ Route::resource('contrato','ContratosController');
 Route::resource('cliente','ClientesController');
 Route::resource('produto','ProdutosController');
 Route::resource('operadora','OperadorasController');
+Route::resource('reparacoes','ReparacoesController');
+Route::resource('substituto','SubstitutoController');
+Route::resource('status','StatusController');
+Route::resource('intervencao','IntervencaoController');
 
 Route::get('/back', 'SiteController@back');
 Route::get('/icon', 'SiteController@icon');
