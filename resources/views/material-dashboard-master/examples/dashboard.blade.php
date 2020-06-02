@@ -1,14 +1,4 @@
-<!--
-=========================================================
-Material Dashboard - v2.1.2
-=========================================================
 
-Product Page: https://www.creative-tim.com/product/material-dashboard
-Copyright 2020 Creative Tim (https://www.creative-tim.com)
-Coded by Creative Tim
-
-=========================================================
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -726,8 +716,6 @@ The above copyright notice and this permission notice shall be included in all c
   <script src="../../../../public/js/plugins/bootstrap-notify.js"></script>
   <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="../../../../public/js/material-dashboard.js?v=2.1.2" type="text/javascript"></script>
-  <!-- Material Dashboard DEMO methods, don't include it in your project! -->
-  <script src="../assets/demo/demo.js"></script>
   <script>
     $(document).ready(function() {
       $().ready(function() {

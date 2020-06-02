@@ -18,6 +18,7 @@ Route::get('/', 'SiteController@index');
 Route::get('/home', 'SiteController@index')->name('/');
 Auth::routes();
 
+
 Route::get('/admin', 'SiteController@admin');
 Route::get('/func', 'SiteController@func');
 Route::get('/ger', 'SiteController@ger');
@@ -34,12 +35,8 @@ Route::resource('status','StatusController');
 Route::resource('intervencao','IntervencaoController');
 
 Route::get('/back', 'SiteController@back');
-Route::get('/icon', 'SiteController@icon');
-Route::get('/map', 'SiteController@map');
-Route::get('/maps', 'SiteController@maps');
-Route::get('/notification', 'SiteController@notification');
-Route::get('/rt', 'SiteController@rt');
+Route::get('/profile', 'SiteController@profile');
 Route::get('/tables', 'SiteController@tables');
-Route::get('/typo', 'SiteController@typo');
-Route::get('/upgrade', 'SiteController@upgarde');
-Route::get('/dash', 'SiteController@dash');
+Route::get('/publicidade', 'SiteController@publicidade');
+
+
