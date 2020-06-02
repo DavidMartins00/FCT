@@ -26,7 +26,7 @@ class StatusController extends Controller
      */
     public function create()
     {
-        //
+        return view("status.create");
     }
 
     /**
@@ -37,7 +37,15 @@ class StatusController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'status' => 'required|max:255',
+        ]);
+
+        $data = $request->all();
+        $var = new Status();
+        $var->status = $data['status'];
+        $var->save();
+        return Redirect('/status')->with('fm_success','Estado adicionado com sucesso!!');
     }
 
     /**
@@ -73,7 +81,16 @@ class StatusController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->all();
+        $request->validate([
+            'status' => 'required', 'string', 'max:255',
+        ]);
+
+        Status::where(['id'=>$id])->update([
+            'status'=>$data['status'],
+        ]);
+
+        return Redirect('/status')->with('fm_success','Status alterado com sucesso!!');
     }
 
     /**
@@ -84,6 +101,7 @@ class StatusController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Status::where(['id'=>$id])->delete();
+        return Redirect('/status')->with('fm_success','Status eliminado com sucesso');
     }
 }

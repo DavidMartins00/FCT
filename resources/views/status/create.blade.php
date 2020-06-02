@@ -5,16 +5,15 @@
 
     <section class="ready__started project__form">
         <div class="container">
-            <h3 class="text-center">Editar Status</h3>
+            <h3 class="text-center">Criar Status</h3>
             <div class="ready__started-box">
-                <form class="main__form" action="/status/{{$stat->id}}" method="post">
+                <form class="main__form" action="{{ route('status.store') }}" method="post">
                     @csrf
-                    @method('put')
 
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="status" name="status" value="{{$stat->status}}" aria-describedby="firstName" required>
+                                <input type="text" class="form-control" id="status" name="status" placeholder="Concluido" aria-describedby="firstName" required>
                                 <label for="firstName">Status</label>
                             </div>
                         </div>
