@@ -16,7 +16,6 @@ class CreateReparacoesTable extends Migration
         Schema::create('reparacoes', function (Blueprint $table) {
             $table->id();
 
-            $table->string('nome');
             $table->integer('idCliente');
             $table->integer('contacto');
             $table->string('marca');

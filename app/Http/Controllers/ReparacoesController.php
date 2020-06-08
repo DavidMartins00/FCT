@@ -26,7 +26,7 @@ class ReparacoesController extends Controller
      */
     public function create()
     {
-        //
+        return view("reparacoes.create");
     }
 
     /**
@@ -37,7 +37,31 @@ class ReparacoesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'idCliente' => 'required|max:255',
+            'contacto' => 'required|max:255',
+            'marca' => 'required|max:255',
+            'modelo' => 'required|max:255',
+            'imei' => 'required|max:255',
+            'idStatus' => 'required|max:255',
+            'data' => 'required|max:255',
+            'valor' => 'required|max:255',
+            'idRepExt' => 'required|max:255',
+        ]);
+
+        $data = $request->all();
+        $var = new Reparacoes();
+        $var->idCliente = $data['idCliente'];
+        $var->contacto = $data['contacto'];
+        $var->marca = $data['marca'];
+        $var->modelo = $data['modelo'];
+        $var->imei = $data['imei'];
+        $var->idStatus = $data['idStatus'];
+        $var->data = $data['data'];
+        $var->valor = $data['valor'];
+        $var->idRepExt = $data['idRepExt'];
+        $var->save();
+        return Redirect('/reparacoes')->with('fm_success','Estado adicionado com sucesso!!');
     }
 
     /**
@@ -72,7 +96,31 @@ class ReparacoesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->all();
+        $request->validate([
+            'idCliente' => 'required',
+            'contacto' => 'required',
+            'marca' => 'required',
+            'modelo' => 'required',
+            'imei' => 'required',
+            'idStatus' => 'required',
+            'data' => 'required',
+            'valor' => 'required',
+            'idRepExt' => 'required',
+        ]);
+
+        Reparacoes::where(['id'=>$id])->update([
+            'idCliente' => $data['idCliente'],
+            'contacto' => $data['contacto'],
+            'marca' => $data['marca'],
+            'modelo' => $data['modelo'],
+            'imei' => $data['imei'],
+            'idStatus' => $data['idStatus'],
+            'data' => $data['data'],
+            'valor' => $data['valor'],
+            'idRepExt' => $data['idRepExt'],
+        ]);
+        return Redirect('/reparacoes')->with('fm_success','Status alterado com sucesso!!');
     }
 
     /**
@@ -83,6 +131,7 @@ class ReparacoesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Reparacoes::where(['id'=>$id])->delete();
+        return Redirect('/reparacoes')->with('fm_success','Status eliminado com sucesso');
     }
 }

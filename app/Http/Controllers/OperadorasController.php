@@ -26,7 +26,7 @@ class OperadorasController extends Controller
      */
     public function create()
     {
-        //
+        return view("operadoras.create");
     }
 
     /**
@@ -37,7 +37,17 @@ class OperadorasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nome' => 'required|max:255',
+            'pais' => 'required|max:255',
+        ]);
+
+        $data = $request->all();
+        $var = new Operadoras();
+        $var->nome = $data['nome'];
+        $var->pais = $data['pais'];
+        $var->save();
+        return Redirect('/operadora')->with('fm_success','Estado adicionado com sucesso!!');
     }
 
     /**
@@ -72,7 +82,18 @@ class OperadorasController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->all();
+        $request->validate([
+            'nome' => 'required|max:255',
+            'pais' => 'required|max:255',
+        ]);
+
+        Operadoras::where(['id'=>$id])->update([
+            'nome' => $data['nome'],
+            'pais' => $data['pais'],
+        ]);
+
+        return Redirect('/operadoras')->with('fm_success','Status alterado com sucesso!!');
     }
 
     /**
