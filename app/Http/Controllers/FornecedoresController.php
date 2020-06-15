@@ -26,7 +26,7 @@ class FornecedoresController extends Controller
      */
     public function create()
     {
-        //
+        return view("fornecedores.create");
     }
 
     /**
@@ -37,7 +37,29 @@ class FornecedoresController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nome' => 'required|max:255',
+            'nif' => 'required|max:255',
+            'morada' => 'required|max:255',
+            'cpost' => 'required|max:255',
+            'cp' => 'required|max:255',
+            'email' => 'required|max:255',
+            'telemovel' => 'required|max:255',
+            'localidade' => 'required|max:255',
+        ]);
+
+        $data = $request->all();
+        $var = new Fornecedores();
+        $var->nome = $data['nome'];
+        $var->nif = $data['nif'];
+        $var->morada = $data['morada'];
+        $var->cpost = $data['cpost'];
+        $var->cp = $data['cp'];
+        $var->email = $data['email'];
+        $var->telemovel = $data['telemovel'];
+        $var->localidade = $data['localidade'];
+        $var->save();
+        return Redirect('/fornecedores')->with('fm_success','Estado adicionado com sucesso!!');
     }
 
     /**
@@ -59,8 +81,8 @@ class FornecedoresController extends Controller
      */
     public function edit($id)
     {
-        $fornec = User::findorfail($id);
-        return View("fornecedores/edit")->with(compact('fornec'));
+        $var = Fornecedores::findorfail($id);
+        return View("fornecedores/edit")->with(compact('var'));
     }
 
     /**
@@ -72,7 +94,29 @@ class FornecedoresController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->all();
+        $request->validate([
+            'nome' => 'required|max:255',
+            'nif' => 'required|max:255',
+            'morada' => 'required|max:255',
+            'cpost' => 'required|max:255',
+            'cp' => 'required|max:255',
+            'email' => 'required|max:255',
+            'telemovel' => 'required|max:255',
+            'localidade' => 'required|max:255',
+        ]);
+
+        Fornecedores::where(['id'=>$id])->update([
+            'nome' => $data['nome'],
+            'nif' => $data['nif'],
+            'morada' => $data['morada'],
+            'cpost' => $data['cpost'],
+            'cp' => $data['cp'],
+            'email' => $data['email'],
+            'telemovel' => $data['telemovel'],
+            'localidade' => $data['localidade'],
+        ]);
+        return Redirect('/fornecedores')->with('fm_success','Status alterado com sucesso!!');
     }
 
     /**
@@ -83,6 +127,7 @@ class FornecedoresController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Fornecedores::where(['id'=>$id])->delete();
+        return Redirect('/fornecedores')->with('fm_success','Status eliminado com sucesso');
     }
 }

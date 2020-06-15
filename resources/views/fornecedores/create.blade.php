@@ -7,20 +7,19 @@
             <div class="container">
                 <h3 class="text-center">Editar Status</h3>
                 <div class="ready__started-box">
-                    <form class="main__form" action="/fornecedores/{{$var->id}}" method="post">
+                    <form class="main__form" action="{{ route('fornecedores.store') }}" method="post">
                         @csrf
-                        @method('put')
 
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control"  name="nome" aria-describedby="nome" value="{{$var->nome}}" placeholder="nome" required>
+                                    <input type="text" class="form-control"  name="nome" aria-describedby="nome" placeholder="nome" required>
                                     <label for="nome">nome</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="nif" aria-describedby="nif" value="{{$var->nif}}" placeholder="nif" required>
+                                    <input type="text" class="form-control" name="nif" aria-describedby="nif"  placeholder="nif" required>
                                     <label for="nif">nif</label>
                                 </div>
                             </div>
@@ -28,13 +27,13 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="morada" aria-describedby="morada" value="{{$var->morada}}" placeholder="morada" required>
+                                    <input type="text" class="form-control" name="morada" aria-describedby="morada" placeholder="morada" required>
                                     <label for="morada">morada</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="cpost" aria-describedby="cpost" value="{{$var->cpost}}" placeholder="cpost" required>
+                                    <input type="text" class="form-control" name="cpost" aria-describedby="cpost" placeholder="cpost" required>
                                     <label for="cpost">cpost</label>
                                 </div>
                             </div>
@@ -42,13 +41,13 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="cp" aria-describedby="cp" value="{{$var->cp}}" placeholder="cp" required>
+                                    <input type="text" class="form-control" name="cp" aria-describedby="cp" placeholder="cp" required>
                                     <label for="cp">cp</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="email" class="form-control" name="email" aria-describedby="email" value="{{$var->email}}" placeholder="email" required>
+                                    <input type="email" class="form-control" name="email" aria-describedby="email" placeholder="email" required>
                                     <label for="email">email</label>
                                 </div>
                             </div>
@@ -57,13 +56,13 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="telemovel" aria-describedby="telemovel" value="{{$var->telemovel}}" placeholder="telemovel" required>
+                                    <input type="text" class="form-control" name="telemovel" aria-describedby="telemovel" placeholder="telemovel" required>
                                     <label for="telemovel">telemovel</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="localidade" aria-describedby="localidade" value="{{$var->localidade}}" placeholder="localidade" required>
+                                    <input type="text" class="form-control" name="localidade" aria-describedby="localidade" placeholder="localidade" required>
                                     <label for="localidade">localidade</label>
                                 </div>
                             </div>

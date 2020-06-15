@@ -69,8 +69,8 @@ class OperadorasController extends Controller
      */
     public function edit($id)
     {
-        $op = Operadoras::findorfail($id);
-        return View("operadoras/edit")->with(compact('op'));
+        $var = Operadoras::findorfail($id);
+        return View("operadoras/edit")->with(compact('var'));
     }
 
     /**
@@ -93,7 +93,7 @@ class OperadorasController extends Controller
             'pais' => $data['pais'],
         ]);
 
-        return Redirect('/operadoras')->with('fm_success','Status alterado com sucesso!!');
+        return Redirect('/operadora')->with('fm_success','Status alterado com sucesso!!');
     }
 
     /**
@@ -104,6 +104,7 @@ class OperadorasController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Operadoras::where(['id'=>$id])->delete();
+        return Redirect('/operadora')->with('fm_success','Status eliminado com sucesso');
     }
 }
