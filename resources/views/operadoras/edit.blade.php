@@ -1,69 +1,35 @@
 @extends('layouts/app')
 @section('content')
-    <div class="back">
-        <br>
-        <div>
-            <center>
-                <form class="form-horizontal" action="/user/{{$user->id}}" method="post">
-                    @csrf
-                    @method('put')
-                    <fieldset>
 
-                        <!-- Form Name -->
-                        <legend>Editar Funcionario</legend>
+    <link href="{{ asset('css/creedit.css') }}" rel="stylesheet">
 
-                        <!-- Text input-->
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="textinput">Nome</label>
-                            <div class="col-md-4">
-                                <input id="name" name="name" type="text" class="form-control input-md" value="{{$user->name}}">
+        <section class="ready__started project__form">
+            <div class="container">
+                <h3 class="text-center">Editar Status</h3>
+                <div class="ready__started-box">
+                    <form class="main__form" action="/operadora/{{$var->id}}" method="post">
+                        @csrf
+                        @method('put')
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control"  name="nome" aria-describedby="nome" value="{{$var->nome}}" placeholder="nome" required>
+                                    <label for="nome">Nome</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="pais" aria-describedby="pais" value="{{$var->pais}}" placeholder="pais" required>
+                                    <label for="pais">pais</label>
+                                </div>
                             </div>
                         </div>
-
-                        <!-- Text input-->
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="textinput">Email</label>
-                            <div class="col-md-4">
-                                <input id="email" name="email" type="text" class="form-control input-md" value="{{$user->email}}">
-                            </div>
-                        </div>
-
-                        <!-- Password input-->
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="passwordinput">Senha</label>
-                            <div class="col-md-4">
-                                <input id="password" name="password" type="password" class="form-control input-md">
-                            </div>
-                        </div>
-
-
-                        <!-- Nivel input-->
-
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="role">Cargo</label>
-                            <div class="col-md-4">
-                                <select class="custom-select" name="role" id="role">
-                                    <option value="Cliente">Cliente</option>
-                                    <option value="Funcionario">Funcionario</option>
-                                    <option value="Gerente">Gerente</option>
-
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-
-                        </div>
-
-                        <div class="form-group">
-                            <button type="submit" id="add" name="add" class="btn btn-outline-dark  btt" >Submeter</button>
-                        </div>
-                    </fieldset>
-                </form>
-            </center>
-
-        </div>
-        <br>
-    </div>
+                        <div class="text-center">
+                            <button type="submit" class=" btn btn-get"><span> Submeter!</span></button></div>
+                    </form>
+                </div>
+            </div>
+        </section>
 
 @endsection

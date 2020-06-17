@@ -33,10 +33,16 @@ Route::resource('reparacoes','ReparacoesController');
 Route::resource('substituto','SubstitutoController');
 Route::resource('status','StatusController');
 Route::resource('intervencao','IntervencaoController');
+Route::resource('nencomenda','nEncomendaController');
+Route::resource('pencomenda','PEncomendaController');
+Route::resource('repext','repExtController');
 
 Route::get('/back', 'SiteController@back');
 Route::get('/profile', 'SiteController@profile');
 Route::get('/tables', 'SiteController@tables');
 Route::get('/publicidade', 'SiteController@publicidade');
+
+
+
 
 

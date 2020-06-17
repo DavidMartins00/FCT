@@ -19,7 +19,7 @@ class CreateProdutosTable extends Migration
             $table->double('preco');
             $table->integer('imei');
             $table->string('desc');
-            $table->string('img');
+            $table->string('img')->nullable();
             $table->timestamps();
         });
     }

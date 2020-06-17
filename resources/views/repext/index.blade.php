@@ -10,27 +10,28 @@
                     <th>ID</th>
                     <th>Nome</th>
                     <th>Morada</th>
-                    <th>NIF</th>
-                    <th>Codigo Postal</th>
-                    <th>Condicoes Pagamento</th>
-                    <th>Email</th>
-                    <th>Telemovel</th>
+                    <th>Cdpost</th>
                     <th>Localidade</th>
+                    <th>Contrib</th>
+                    <th>Contacto</th>
+
                     <th class="text-center">Action</th>
                 </tr>
                 </thead>
-                @forelse ($fornec as $var)
+                @forelse ($rep as $var)
                 <tr>
+
                     <td>{{$var->id}}</td>
                     <td>{{$var->nome}}</td>
                     <td>{{$var->morada}}</td>
-                    <td>{{$var->nif}}</td>
-                    <td>{{$var->cpost}}</td>
-                    <td>{{$var->cp}}</td>
-                    <td>{{$var->email}}</td>
-                    <td>{{$var->telemovel}}</td>
+                    <td>{{$var->cdpost}}</td>
                     <td>{{$var->localidade}}</td>
-                    <td class="text-center"><a class='btn btn-info btn-xs' href="/fornecedores/{{$var->id}}/edit">Edit</a> <form action="/fornecedores/{{$var->id}}" style="margin:1px" method="post"> @csrf @method('delete') <input type="submit" name="" class="btn btn-danger btn-xs" value="Del"> </form></td>
+                    <td>{{$var->contrib}}</td>
+                    <td>{{$var->contacto}}</td>
+
+
+
+                    <td class="text-center"><a class='btn btn-info btn-xs' href="/nencomenda/{{$var->id}}/edit">Edit</a> <form action="/nencomenda/{{$var->id}}" style="margin:1px" method="post"> @csrf @method('delete') <input type="submit" name="" class="btn btn-danger btn-xs" value="Del"> </form></td>
                 </tr>
                 @empty
                     <tr>

@@ -1,69 +1,57 @@
 @extends('layouts/app')
 @section('content')
-    <div class="back">
-        <br>
-        <div>
-            <center>
-                <form class="form-horizontal" action="/user/{{$user->id}}" method="post">
-                    @csrf
-                    @method('put')
-                    <fieldset>
 
-                        <!-- Form Name -->
-                        <legend>Editar Funcionario</legend>
+    <link href="{{ asset('css/creedit.css') }}" rel="stylesheet">
 
-                        <!-- Text input-->
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="textinput">Nome</label>
-                            <div class="col-md-4">
-                                <input id="name" name="name" type="text" class="form-control input-md" value="{{$user->name}}">
+        <section class="ready__started project__form">
+            <div class="container">
+                <h3 class="text-center">Editar Utilizador</h3>
+                <div class="ready__started-box">
+                    <form class="main__form" action="/user/{{$user->id}}" method="post">
+                        @csrf
+                        @method('put')
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="name" id="name" aria-describedby="name" value="{{$user->name}}" placeholder="John" required>
+                                    <label for="name">Nome</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" name="email" id="email" aria-describedby="email" value="{{$user->email}}" placeholder="exemplo@xyz.com" required>
+                                    <label for="email">Email</label>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="password" class="form-control" name="password" id="password" aria-describedby="password" placeholder="Password">
+                                    <label for="password">Password</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <select class="form-control" name="role" id="role" style="height: 60px" >
+                                        <option selected hidden value="{{$user->role}}">{{$user->role}}</option>
+                                        <option value="Cliente">Cliente</option>
+                                        <option value="Funcionario">Funcionario</option>
+                                        <option value="Gerente">Gerente</option>
+
+                                     </select>
+                                     <label for="role">Cargo</label>
+                                </div>
                             </div>
                         </div>
-
-                        <!-- Text input-->
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="textinput">Email</label>
-                            <div class="col-md-4">
-                                <input id="email" name="email" type="text" class="form-control input-md" value="{{$user->email}}">
-                            </div>
-                        </div>
-
-                        <!-- Password input-->
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="passwordinput">Senha</label>
-                            <div class="col-md-4">
-                                <input id="password" name="password" type="password" class="form-control input-md">
-                            </div>
-                        </div>
-
-
-                        <!-- Nivel input-->
-
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="role">Cargo</label>
-                            <div class="col-md-4">
-                                <select class="custom-select" name="role" id="role">
-                                    <option value="Cliente">Cliente</option>
-                                    <option value="Funcionario">Funcionario</option>
-                                    <option value="Gerente">Gerente</option>
-
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-
-                        </div>
-
-                        <div class="form-group">
-                            <button type="submit" id="add" name="add" class="btn btn-outline-dark  btt" >Submeter</button>
-                        </div>
-                    </fieldset>
-                </form>
-            </center>
-
-        </div>
-        <br>
-    </div>
+                        <div class="text-center">
+                            <button type="submit" class=" btn btn-get"><span> Submeter!</span></button></div>
+                    </form>
+                </div>
+            </div>
+        </section>
 
 @endsection

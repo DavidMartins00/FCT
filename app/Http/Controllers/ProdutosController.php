@@ -26,7 +26,7 @@ class ProdutosController extends Controller
      */
     public function create()
     {
-        //
+        return view("produtos.create");
     }
 
     /**
@@ -37,7 +37,23 @@ class ProdutosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nome' => 'required|max:255',
+            'preco' => 'required|max:255',
+            'imei' => 'required|max:255',
+            'desc' => 'required|max:255',
+            'img' => 'nullable',
+        ]);
+
+        $data = $request->all();
+        $var = new Produtos();
+        $var->nome = $data['nome'];
+        $var->preco = $data['preco'];
+        $var->imei = $data['imei'];
+        $var->desc = $data['desc'];
+        $var->img = $data['img'];
+        $var->save();
+        return Redirect('/produto')->with('fm_success','Estado adicionado com sucesso!!');
     }
 
     /**
@@ -59,8 +75,8 @@ class ProdutosController extends Controller
      */
     public function edit($id)
     {
-        $pro = Produtos::findorfail($id);
-        return View("produtos/edit")->with(compact('pro'));
+        $var = Produtos::findorfail($id);
+        return View("produtos/edit")->with(compact('var'));
     }
 
     /**
@@ -72,7 +88,24 @@ class ProdutosController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->all();
+        $request->validate([
+            'nome' => 'required|max:255',
+            'preco' => 'required|max:255',
+            'imei' => 'required|max:255',
+            'desc' => 'required|max:255',
+            'img' => 'nullable',
+        ]);
+
+        Produtos::where(['id'=>$id])->update([
+            'nome' => $data['nome'],
+            'preco' => $data['preco'],
+            'imei' => $data['imei'],
+            'desc' => $data['desc'],
+            'img' => $data['img'],
+        ]);
+
+        return Redirect('/produto')->with('fm_success','Status alterado com sucesso!!');
     }
 
     /**
@@ -83,6 +116,7 @@ class ProdutosController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Produtos::where(['id'=>$id])->delete();
+        return Redirect('/produto')->with('fm_success','Status eliminado com sucesso');
     }
 }

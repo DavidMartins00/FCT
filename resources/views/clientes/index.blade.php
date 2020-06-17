@@ -32,7 +32,7 @@
                     <td>{{$var->user_id}}</td>
 
 
-                    <td class="text-center"><a class='btn btn-info btn-xs' href="/user/{{$var->id}}/edit">Edit</a> <form action="/user/{{$var->id}}" style="margin:1px" method="post"> @csrf @method('delete') <input type="submit" name="" class="btn btn-danger btn-xs" value="Del"> </form></td>
+                    <td class="text-center"><a class='btn btn-info btn-xs' href="/cliente/{{$var->id}}/edit">Edit</a> <form action="/cliente/{{$var->id}}" style="margin:1px" method="post"> @csrf @method('delete') <input type="submit" name="" class="btn btn-danger btn-xs" value="Del"> </form></td>
                 </tr>
                 @empty
                     <tr>
