@@ -16,6 +16,11 @@ class SiteController extends Controller
         return view('site/ger');
     }
 
+    public function menu()
+    {
+        return view('site/menu');
+    }
+
     public function func()
     {
         return view('site/func');

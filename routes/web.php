@@ -22,6 +22,7 @@ Auth::routes();
 Route::get('/admin', 'SiteController@admin');
 Route::get('/func', 'SiteController@func');
 Route::get('/ger', 'SiteController@ger');
+Route::get('/menu', 'SiteController@menu');
 
 Route::resource('user','UserController');
 Route::resource('fornecedores','FornecedoresController');
