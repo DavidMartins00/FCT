@@ -16,17 +16,22 @@ class CreateReparacoesTable extends Migration
         Schema::create('reparacoes', function (Blueprint $table) {
             $table->id();
 
-            $table->integer('idCliente');
+            $table->bigInteger('idCliente')->unsigned();
+            $table->bigInteger('idStatus')->unsigned();
+            $table->bigInteger('idRepExt')->unsigned();
+
+
             $table->integer('contacto');
             $table->string('marca');
             $table->string('modelo');
             $table->integer('imei');
-            $table->integer('idStatus');
             $table->date('data');
             $table->double('valor');
-            $table->integer('idRepExt');
-
             $table->timestamps();
+
+            $table->foreign('idCliente')->references('id')->on('clientes');
+            $table->foreign('idStatus')->references('id')->on('statuses');
+            $table->foreign('idRepExt')->references('id')->on('rep_exts');
         });
     }
 

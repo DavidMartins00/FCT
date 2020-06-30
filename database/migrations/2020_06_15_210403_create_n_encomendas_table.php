@@ -17,9 +17,11 @@ class CreateNEncomendasTable extends Migration
             $table->id();
 
             $table->date('data');
-            $table->integer('idCliente');
+            $table->bigInteger('idCliente')->unsigned();
 
             $table->timestamps();
+
+            $table->foreign('idCliente')->references('id')->on('clientes');
         });
     }
 

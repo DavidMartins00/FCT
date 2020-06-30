@@ -21,10 +21,12 @@ class CreateClientesTable extends Migration
             $table->string('localidade');
             $table->string('morada');
             $table->integer('codpost');
-            $table->integer('user_id');
-
+            $table->bigInteger('user_id')->unsigned();
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users');
         });
+
     }
 
     /**

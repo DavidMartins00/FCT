@@ -18,10 +18,13 @@ class CreatePEncomendasTable extends Migration
 
             $table->string('nome');
             $table->integer('qtd');
-            $table->integer('idNota');
-            $table->integer('idProd');
+            $table->bigInteger('idNota')->unsigned();
+            $table->bigInteger('idProd')->unsigned();
 
             $table->timestamps();
+
+            $table->foreign('idNota')->references('id')->on('n_encomendas');
+            $table->foreign('idProd')->references('id')->on('produtos');
         });
     }
 

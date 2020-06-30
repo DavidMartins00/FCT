@@ -15,7 +15,7 @@ class CreateContratosTable extends Migration
     {
         Schema::create('contratos', function (Blueprint $table) {
             $table->id();
-            $table->integer('op_id');
+            $table->bigInteger('op_id')->unsigned();
             $table->string('nome');
             $table->date('dataativ');
             $table->integer('nif');
@@ -31,6 +31,8 @@ class CreateContratosTable extends Migration
             $table->string('contEntregue');
             $table->string('doc');
             $table->timestamps();
+
+            $table->foreign('op_id')->references('id')->on('operadoras');
         });
     }
 

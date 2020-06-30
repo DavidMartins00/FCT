@@ -15,10 +15,14 @@ class CreateIntervencaosTable extends Migration
     {
         Schema::create('intervencaos', function (Blueprint $table) {
             $table->id();
-            $table->string('interv');
-            $table->integer('idRep');
 
+            $table->bigInteger('idRep')->unsigned();
+
+            $table->string('interv');
             $table->timestamps();
+
+
+            $table->foreign('idRep')->references('id')->on('reparacoes');
         });
     }
 
