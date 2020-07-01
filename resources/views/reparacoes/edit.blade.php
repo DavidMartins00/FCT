@@ -15,8 +15,12 @@
 
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="idCliente" id="idCliente" aria-describedby="idCliente" value="{{$rep->idCliente}}" placeholder="Id Cliente" required>
-                                    <label for="idCliente">Id Cliente</label>
+                                    <select class="form-control" name="idCliente" id="idCliente" style="height: 60px" >
+                                        @foreach ($cli as $i)
+                                            <option value="{{$i->id}}">{{$i->nome}}</option>
+                                        @endforeach
+                                    </select>
+                                    <label for="role">Cliente</label>
                                 </div>
                             </div>
                         </div>
@@ -51,8 +55,12 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="idStatus" id="idStatus" aria-describedby="idStatus" value="{{$rep->idStatus}}" placeholder="Id Status" required>
-                                    <label for="idStatus">Id Status</label>
+                                    <select class="form-control" name="idStatus" id="idStatus" style="height: 60px" >
+                                        @foreach ($stat as $i)
+                                            <option value="{{$i->id}}">{{$i->status}}</option>
+                                        @endforeach
+                                    </select>
+                                    <label for="role">Status</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -71,8 +79,12 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="idRepExt" id="idRepExt" aria-describedby="idRepExt" value="{{$rep->idRepExt}}" placeholder="Id Rep Ext" required>
-                                    <label for="idRepExt">Id Rep Ext</label>
+                                    <select class="form-control" name="idRepExt" id="idRepExt" style="height: 60px" >
+                                        @foreach ($repx as $i)
+                                            <option value="{{$i->id}}">{{$i->nome}}</option>
+                                        @endforeach
+                                    </select>
+                                    <label for="role">Reparador</label>
                                 </div>
                             </div>
                         </div>

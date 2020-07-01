@@ -25,15 +25,15 @@
                 <tr>
 
                     <td>{{$var->id}}</td>
-                    <td>{{$var->idCliente}}</td>
+                    <td>{{$var->Clientes->nome}}</td>
                     <td>{{$var->contacto}}</td>
                     <td>{{$var->marca}}</td>
                     <td>{{$var->modelo}}</td>
                     <td>{{$var->imei}}</td>
-                    <td>{{$var->idStatus}}</td>
+                    <td>{{$var->Status->status}}</td>
                     <td>{{$var->data}}</td>
                     <td>{{$var->valor}}</td>
-                    <td>{{$var->idRepExt}}</td>
+                    <td>{{$var->repExt->nome}}</td>
 
 
 

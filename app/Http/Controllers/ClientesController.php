@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Clientes;
+use App\User;
 use Illuminate\Http\Request;
 
 class ClientesController extends Controller
@@ -26,7 +27,8 @@ class ClientesController extends Controller
      */
     public function create()
     {
-        return view("clientes.create");
+        $users = User::select()->get();
+        return view("clientes.create")->with(compact('users'));
     }
 
     /**
@@ -83,7 +85,8 @@ class ClientesController extends Controller
     public function edit($id)
     {
         $var = Clientes::findorfail($id);
-        return View("clientes/edit")->with(compact('var'));
+        $users = User::select()->get();
+        return View("clientes/edit")->with(compact('var','users'));
     }
 
     /**

@@ -20,8 +20,12 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="idCliente" id="idCliente" aria-describedby="idCliente" value="{{$var->idCliente}}" placeholder="idCliente" required>
-                                    <label for="idCliente">idCliente</label>
+                                    <select class="form-control" name="idCliente" id="idCliente" style="height: 60px" >
+                                        @foreach ($cli as $i)
+                                            <option value="{{$i->id}}">{{$i->nome}}</option>
+                                        @endforeach
+                                    </select>
+                                    <label for="role">Cliente</label>
                                 </div>
                             </div>
                         </div>

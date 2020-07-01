@@ -55,8 +55,12 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="user_id" aria-describedby="user_id" placeholder="user_id" required>
-                                    <label for="user_id">user_id</label>
+                                    <select class="form-control" name="user_id" id="user_id" style="height: 60px" >
+                                        @foreach ($users as $var)
+                                            <option value="{{$var->id}}">{{$var->name}}</option>
+                                        @endforeach
+                                    </select>
+                                    <label for="role">User</label>
                                 </div>
                             </div>
                         </div>

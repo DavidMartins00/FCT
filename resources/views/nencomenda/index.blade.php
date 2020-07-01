@@ -19,7 +19,7 @@
 
                     <td>{{$var->id}}</td>
                     <td>{{$var->data}}</td>
-                    <td>{{$var->idCliente}}</td>
+                    <td>{{$var->cliente->nome}}</td>
 
 
 
