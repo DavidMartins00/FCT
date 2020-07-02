@@ -15,21 +15,7 @@
                     <th class="text-center">Action</th>
                 </tr>
                 </thead>
-                @forelse ($sub as $var)
-                <tr>
 
-                    <td>{{$var->id}}</td>
-                    <td>{{$var->marca}}</td>
-                    <td>{{$var->modelo}}</td>
-                    <td>{{$var->imei}}</td>
-
-                    <td class="text-center"><a class='btn btn-info btn-xs' href="/substituto/{{$var->id}}/edit">Edit</a> <form action="/substituto/{{$var->id}}" style="margin:1px" method="post"> @csrf @method('delete') <input type="submit" name="" class="btn btn-danger btn-xs" value="Del"> </form></td>
-                </tr>
-                @empty
-                    <tr>
-                        <div class="centercr">Lista Vazia</div>
-                    </tr>
-                @endforelse
             </table>
         </div>
     </div>

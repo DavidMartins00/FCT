@@ -19,26 +19,7 @@
                     <th class="text-center">Action</th>
                 </tr>
                 </thead>
-                @forelse ($cli as $var)
-                <tr>
 
-                    <td>{{$var->id}}</td>
-                    <td>{{$var->nome}}</td>
-                    <td>{{$var->telefone}}</td>
-                    <td>{{$var->nif}}</td>
-                    <td>{{$var->localidade}}</td>
-                    <td>{{$var->morada}}</td>
-                    <td>{{$var->codpost}}</td>
-                    <td>{{$var->user->name}}</td>
-
-
-                    <td class="text-center"><a class='btn btn-info btn-xs' href="/cliente/{{$var->id}}/edit">Edit</a> <form action="/cliente/{{$var->id}}" style="margin:1px" method="post"> @csrf @method('delete') <input type="submit" name="" class="btn btn-danger btn-xs" value="Del"> </form></td>
-                </tr>
-                @empty
-                    <tr>
-                        <div class="centercr">Lista Vazia</div>
-                    </tr>
-                @endforelse
             </table>
         </div>
     </div>

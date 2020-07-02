@@ -17,23 +17,7 @@
                     <th class="text-center">Action</th>
                 </tr>
                 </thead>
-                @forelse ($pro as $var)
-                <tr>
-                    <td>{{$var->id}}</td>
-                    <td>{{$var->nome}}</td>
-                    <td>{{$var->preco}}</td>
-                    <td>{{$var->imei}}</td>
-                    <td>{{$var->desc}}</td>
-                    <td>{{$var->img}}</td>
 
-
-                    <td class="text-center"><a class='btn btn-info btn-xs' href="/produto/{{$var->id}}/edit">Edit</a> <form action="/produto/{{$var->id}}" style="margin:1px" method="post"> @csrf @method('delete') <input type="submit" name="" class="btn btn-danger btn-xs" value="Del"> </form></td>
-                </tr>
-                @empty
-                    <tr>
-                        <div class="centercr">Lista Vazia</div>
-                    </tr>
-                @endforelse
             </table>
         </div>
     </div>

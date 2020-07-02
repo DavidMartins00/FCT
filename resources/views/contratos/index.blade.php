@@ -27,32 +27,7 @@
                     <th class="text-center">Action</th>
                 </tr>
                 </thead>
-                @forelse ($contr as $var)
-                <tr>
-                    <td>{{$var->id}}</td>
-                    <td>{{$var->op_id}}</td>
-                    <td>{{$var->nif}}</td>
-                    <td>{{$var->nome}}</td>
-                    <td>{{$var->dataativ}}</td>
-                    <td>{{$var->agendado}}</td>
-                    <td>{{$var->instalado}}</td>
-                    <td>{{$var->oknok}}</td>
-                    <td>{{$var->tarifario}}</td>
-                    <td>{{$var->instaladoPNos}}</td>
-                    <td>{{$var->valsIva}}</td>
-                    <td>{{$var->valIva}}</td>
-                    <td>{{$var->valIvaR}}</td>
-                    <td>{{$var->recebido}}</td>
-                    <td>{{$var->contEntregue}}</td>
-                    <td>{{$var->doc}}</td>
 
-                    <td class="text-center"><a class='btn btn-info btn-xs' href="/contrato/{{$var->id}}/edit">Edit</a> <form action="/contrato/{{$var->id}}" style="margin:1px" method="post"> @csrf @method('delete') <input type="submit" name="" class="btn btn-danger btn-xs" value="Del"> </form></td>
-                </tr>
-                @empty
-                    <tr>
-                        <div class="centercr">Lista Vazia</div>
-                    </tr>
-                @endforelse
             </table>
         </div>
     </div>

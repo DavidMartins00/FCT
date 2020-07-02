@@ -19,24 +19,7 @@
                     <th class="text-center">Action</th>
                 </tr>
                 </thead>
-                @forelse ($fornec as $var)
-                <tr>
-                    <td>{{$var->id}}</td>
-                    <td>{{$var->nome}}</td>
-                    <td>{{$var->morada}}</td>
-                    <td>{{$var->nif}}</td>
-                    <td>{{$var->cpost}}</td>
-                    <td>{{$var->cp}}</td>
-                    <td>{{$var->email}}</td>
-                    <td>{{$var->telemovel}}</td>
-                    <td>{{$var->localidade}}</td>
-                    <td class="text-center"><a class='btn btn-info btn-xs' href="/fornecedores/{{$var->id}}/edit">Edit</a> <form action="/fornecedores/{{$var->id}}" style="margin:1px" method="post"> @csrf @method('delete') <input type="submit" name="" class="btn btn-danger btn-xs" value="Del"> </form></td>
-                </tr>
-                @empty
-                    <tr>
-                        <div class="centercr">Lista Vazia</div>
-                    </tr>
-                @endforelse
+
             </table>
         </div>
     </div>

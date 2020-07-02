@@ -2,6 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Clientes;
+use App\Contratos;
+use App\Fornecedores;
+use App\Intervencao;
+use App\nEncomenda;
+use App\Operadoras;
+use App\PEncomenda;
+use App\Produtos;
+use App\Reparacoes;
+use App\repExt;
+use App\Status;
+use App\Substituto;
+use App\User;
 use Illuminate\Http\Request;
 
 class SiteController extends Controller
@@ -44,7 +57,22 @@ class SiteController extends Controller
 
     public function tables()
     {
-        return view('backoffice/tables');
+
+        $cli = Clientes::select()->get();
+        $stat = Status::select()->get();
+        $rep = repExt::select()->get();
+        $repx = Reparacoes::select()->get();
+        $ctr = Contratos::select()->get();
+        $for = Fornecedores::select()->get();
+        $int = Intervencao::select()->get();
+        $nenc = nEncomenda::select()->get();
+        $op = Operadoras::select()->get();
+        $pen = PEncomenda::select()->get();
+        $pro = Produtos::select()->get();
+        $sub = Substituto::select()->get();
+        $usr = User::select()->get();
+
+        return view("backoffice.tables")->with(compact('cli','stat','rep','repx','ctr','for','int','nenc','op','pen','pro','sub','usr'));
     }
 
     public function publicidade()
