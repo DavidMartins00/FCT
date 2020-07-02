@@ -54,10 +54,12 @@ http://www.tooplate.com/view/2099-scenic
           <!-- MENU LINKS -->
           <div class="collapse navbar-collapse">
                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#home" class="smoothScroll">Home</a></li>
+
+                   <li><a href="login" class="smoothScroll section-btn"><span data-hover="Entrar">Entrar</span></a></li>
+                   <li><a href="register" class="smoothScroll section-btn"><span data-hover="Entrar">Registar</span></a></li>
 
                     <ul class="section-btn">
-                        <a href="login" class="smoothScroll"><span data-hover="Entrar">Entrar</span></a>
+
                     </ul>
                </ul>
           </div>
