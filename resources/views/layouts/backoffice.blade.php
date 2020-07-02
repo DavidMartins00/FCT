@@ -18,13 +18,17 @@
     <link href="{{asset('assetsDBM/css/material-dashboard.css?v=2.1.2')}}" rel="stylesheet" />
 </head>
 
-<body class="">
-@include('backoffice/includes/sidebar_back')
-@include('backoffice/includes/nav_pag')
+<body>
 <div class="wrapper ">
-
-
+    @include('backoffice/includes/sidebar_back')
+    @include('backoffice/includes/nav_pag')
+    <main>
+        @yield('contentB')
+    </main>
 </div>
+</body>
+
+
 
 <!--   Core JS Files   -->
 <script src="{{asset('assetsDBM/js/core/jquery.min.js')}}"></script>
@@ -245,11 +249,5 @@
 
     });
 </script>
-</body>
-
-        <main>
-            @yield('contentB')
-        </main>
-
 </html>
 
