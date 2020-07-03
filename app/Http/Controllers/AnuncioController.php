@@ -64,7 +64,8 @@ class AnuncioController extends Controller
      */
     public function show($id)
     {
-        //
+        $var = Anuncio::findorfail($id);
+        return View("anuncios/show")->with(compact('var'));
     }
 
     /**

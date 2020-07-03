@@ -102,11 +102,12 @@ http://www.tooplate.com/view/2099-scenic
                    @forelse ($ad as $var)
                        <div class="col-md-4 col-sm-4 item">
                            <div class="team-item">
-                              <a href="/"> <img src="{{$var->img}}" class="img-responsive" alt=""></a>
+                              <img src="{{$var->img}}" class="img-responsive" alt="">
                                <div class="team-overlay">
                                </div>
                            </div>
-                           <p>{{$var->nome}}</p>
+                           <a href="/anuncio/{{$var->id}}"><h3>{{$var->nome}}</h3></a>
+                           <p>{{$var->preco}}€</p>
                        </div>
                    @empty
                        <div style="text-align: center;">
