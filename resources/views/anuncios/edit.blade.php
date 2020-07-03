@@ -28,9 +28,8 @@
                     </div>
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="desc" aria-describedby="desc"
-                                       value="{{$var->desc}}" placeholder="Descrição" required>
+                            <div class="form-group form-message">
+                                <textarea class="form-control" name="desc" id="desc" rows="6" placeholder="Descrição">{{$var->desc}}</textarea>
                                 <label for="desc">Descrição</label>
                             </div>
                         </div>

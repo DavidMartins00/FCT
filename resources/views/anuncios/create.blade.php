@@ -26,8 +26,8 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" name="desc" aria-describedby="desc"  placeholder="Descrição" required>
+                                <div class="form-group form-message">
+                                    <textarea class="form-control" name="desc" id="desc" rows="6" placeholder="Descrição"></textarea>
                                     <label for="desc">Descrição</label>
                                 </div>
                             </div>
@@ -35,6 +35,7 @@
                                 <div class="form-group">
                                     <input type="text" class="form-control" name="img" aria-describedby="img" placeholder="img" required>
                                     <label for="img">Link Imagem</label>
+                                    <small class="form-check-label">Recomendo usar o <a href="https://imgur.com/upload?beta">Imgur</a> depois "Abrir imagem em novo separador" e copiar link</small>
                                 </div>
                             </div>
                         </div>
