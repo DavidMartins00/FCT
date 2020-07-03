@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Anuncio;
 use App\Clientes;
 use App\Contratos;
 use App\Fornecedores;
@@ -41,7 +42,8 @@ class SiteController extends Controller
 
     public function index()
     {
-        return view('site/index');
+        $ad = Anuncio::where("vis", "LIKE", "1")->get();
+        return view('site/index')->with(compact('ad'));
     }
 
 
@@ -71,8 +73,9 @@ class SiteController extends Controller
         $pro = Produtos::select()->get();
         $sub = Substituto::select()->get();
         $usr = User::select()->get();
+        $ad = Anuncio::select()->get();
 
-        return view("backoffice.tables")->with(compact('cli','stat','rep','repx','ctr','for','int','nenc','op','pen','pro','sub','usr'));
+        return view("backoffice.tables")->with(compact('cli','stat','rep','repx','ctr','for','int','nenc','op','pen','pro','sub','usr','ad'));
     }
 
     public function publicidade()

@@ -37,6 +37,7 @@ Route::resource('intervencao','IntervencaoController');
 Route::resource('nencomenda','nEncomendaController');
 Route::resource('pencomenda','PEncomendaController');
 Route::resource('repext','repExtController');
+Route::resource('anuncio','AnuncioController');
 
 Route::get('/back', 'SiteController@back');
 Route::get('/profile', 'SiteController@profile');

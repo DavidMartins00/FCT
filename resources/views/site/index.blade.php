@@ -92,57 +92,27 @@ http://www.tooplate.com/view/2099-scenic
                <div class="col-md-offset-2 col-md-8 col-sm-12">
                     <!-- SECTION TITLE -->
                     <div class="section-title">
-                         <h1>Produtos</h1>
+                         <h1>Discontos</h1>
                     </div>
                </div>
 
                <div class="clearfix"></div>
 
                <div id="owl-team" class="owl-carousel">
-                    <div class="col-md-4 col-sm-4 item">
-                         <div class="team-item">
-                              <img src="img/test.png" class="img-responsive" alt="">
-                              <div class="team-overlay">
-                              </div>
-                         </div>
-                         <p>Anuncio</p>
-                    </div>
-
-                    <div class="col-md-4 col-sm-4 item">
-                        <div class="team-item">
-                            <img src="img/test.png" class="img-responsive" alt="">
-                            <div class="team-overlay">
-                            </div>
-                        </div>
-                        <p>Anuncio</p>
-                    </div>
-
-                    <div class="col-md-4 col-sm-4 item">
-                        <div class="team-item">
-                            <img src="img/test.png" class="img-responsive" alt="">
-                            <div class="team-overlay">
-                            </div>
-                        </div>
-                        <p>Anuncio</p>
-                    </div>
-
-                    <div class="col-md-4 col-sm-4 item">
-                        <div class="team-item">
-                            <img src="img/test.png" class="img-responsive" alt="">
-                            <div class="team-overlay">
-                            </div>
-                        </div>
-                        <p>Anuncio</p>
-                    </div>
-
-                    <div class="col-md-4 col-sm-4 item">
-                        <div class="team-item">
-                            <img src="img/test.png" class="img-responsive" alt="">
-                            <div class="team-overlay">
-                            </div>
-                        </div>
-                        <p>Anuncio</p>
-                    </div>
+                   @forelse ($ad as $var)
+                       <div class="col-md-4 col-sm-4 item">
+                           <div class="team-item">
+                              <a href="/"> <img src="{{$var->img}}" class="img-responsive" alt=""></a>
+                               <div class="team-overlay">
+                               </div>
+                           </div>
+                           <p>{{$var->nome}}</p>
+                       </div>
+                   @empty
+                       <div style="text-align: center;">
+                       <h1>Sem discontos</h1>
+                       </div>
+                   @endforelse
                </div>
 
           </div>

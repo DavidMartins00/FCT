@@ -14,7 +14,7 @@
                 <div class="panel-heading">
                     <h3 class="panel-title">Clientes</h3>
                     <div class="pull-right">
-                        <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filter</button>
+                        <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
                     </div>
                 </div>
                 <table class="table">
@@ -59,7 +59,7 @@
                 <div class="panel-heading">
                     <h3 class="panel-title">Produtos</h3>
                     <div class="pull-right">
-                        <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filter</button>
+                        <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
                     </div>
                 </div>
                 <table class="table">
@@ -100,7 +100,7 @@
                 <div class="panel-heading">
                     <h3 class="panel-title">Operadoras</h3>
                     <div class="pull-right">
-                        <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filter</button>
+                        <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
                     </div>
                 </div>
                 <table class="table">
@@ -135,7 +135,7 @@
                 <div class="panel-heading">
                     <h3 class="panel-title">Substitutos</h3>
                     <div class="pull-right">
-                        <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filter</button>
+                        <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
                     </div>
                 </div>
                 <table class="table">
@@ -171,7 +171,10 @@
                 <div class="panel-heading">
                     <h3 class="panel-title">Users</h3>
                     <div class="pull-right">
-                        <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filter</button>
+                        <div class="row">
+                        <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
+                        <button class="btn btn-default btn-xs btn-filter">Adicionar</button>
+                        </div>
                     </div>
                 </div>
                 <table class="table">
@@ -181,7 +184,6 @@
                         <th><input type="text" class="form-control" placeholder="Nome" disabled></th>
                         <th><input type="text" class="form-control" placeholder="Email" disabled></th>
                         <th><input type="text" class="form-control" placeholder="Role" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Password" disabled></th>
                         <th class="text-center ">Ação</th>
                     </tr>
                     </thead>
@@ -207,7 +209,7 @@
                 <div class="panel-heading">
                     <h3 class="panel-title">Fornecedores</h3>
                     <div class="pull-right">
-                        <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filter</button>
+                        <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
                     </div>
                 </div>
                 <table class="table">
@@ -252,7 +254,7 @@
                 <div class="panel-heading">
                     <h3 class="panel-title">Contratos</h3>
                     <div class="pull-right">
-                        <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filter</button>
+                        <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
                     </div>
                 </div>
                 <table class="table">
@@ -312,7 +314,7 @@
                 <div class="panel-heading">
                     <h3 class="panel-title">Status</h3>
                     <div class="pull-right">
-                        <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filter</button>
+                        <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
                     </div>
                 </div>
                 <table class="table">
@@ -344,7 +346,7 @@
                 <div class="panel-heading">
                     <h3 class="panel-title">Reparadores</h3>
                     <div class="pull-right">
-                        <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filter</button>
+                        <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
                     </div>
                 </div>
                 <table class="table">
@@ -386,7 +388,7 @@
                 <div class="panel-heading">
                     <h3 class="panel-title">Nota Encomenda</h3>
                     <div class="pull-right">
-                        <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filter</button>
+                        <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
                     </div>
                 </div>
                 <table class="table">
@@ -420,7 +422,7 @@
                 <div class="panel-heading">
                     <h3 class="panel-title">Produtos Encomenda</h3>
                     <div class="pull-right">
-                        <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filter</button>
+                        <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
                     </div>
                 </div>
                 <table class="table">
@@ -458,7 +460,7 @@
                 <div class="panel-heading">
                     <h3 class="panel-title">Reparações</h3>
                     <div class="pull-right">
-                        <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filter</button>
+                        <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
                     </div>
                 </div>
                 <table class="table">
@@ -506,7 +508,7 @@
                 <div class="panel-heading">
                     <h3 class="panel-title">Intervenções</h3>
                     <div class="pull-right">
-                        <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filter</button>
+                        <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
                     </div>
                 </div>
                 <table class="table">
@@ -526,6 +528,51 @@
                             <td>{{$var->idRep}}</td>
 
                             <td class="text-center"><a class='btn btn-info btn-xs' href="/intervencao/{{$var->id}}/edit">Edit</a> <form action="/intervencao/{{$var->id}}" style="margin:1px" method="post"> @csrf @method('delete') <input type="submit" name="" class="btn btn-danger btn-xs" value="Del"> </form></td>
+                        </tr>
+                    @empty
+
+                    @endforelse
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!------ Anuncios ---------->
+        <div class="row">
+            <div class="panel panel-primary filterable">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Anuncios</h3>
+                    <div class="pull-right">
+                        <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
+                    </div>
+                </div>
+                <table class="table">
+                    <thead>
+                    <tr class="filters">
+                        <th><input type="text" class="form-control" placeholder="ID" disabled></th>
+                        <th><input type="text" class="form-control" placeholder="Nome" disabled></th>
+                        <th><input type="text" class="form-control" placeholder="Preço" disabled></th>
+                        <th><input type="text" class="form-control" placeholder="Descrição" disabled></th>
+                        <th><input type="text" class="form-control" placeholder="Visivel" disabled></th>
+                        <th><input type="text" class="form-control" placeholder="Imagem" disabled></th>
+                        <th class="text-center ">Ação</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @forelse ($ad as $var)
+                        <tr>
+                            <td>{{$var->id}}</td>
+                            <td>{{$var->nome}}</td>
+                            <td>{{$var->preco}}€</td>
+                            <td>{{$var->desc}}</td>
+                            <td>@if($var->vis == 1)
+                                Sim
+                                @else
+                                Não
+                                @endif
+                            </td>
+                            <td><img src="{{$var->img}}" height="50px" width="auto"></td>
+
+                            <td class="text-center"><a class='btn btn-info btn-xs' href="/anuncio/{{$var->id}}/edit">Edit</a> <form action="/anuncio/{{$var->id}}" style="margin:1px" method="post"> @csrf @method('delete') <input type="submit" name="" class="btn btn-danger btn-xs" value="Del"> </form></td>
                         </tr>
                     @empty
 
