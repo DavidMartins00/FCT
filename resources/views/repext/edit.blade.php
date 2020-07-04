@@ -5,7 +5,7 @@
 
         <section class="ready__started project__form">
             <div class="container">
-                <h3 class="text-center">Editar Reparações</h3>
+                <h3 class="text-center">Editar Reparador</h3>
                 <div class="ready__started-box">
                     <form class="main__form" action="/repext/{{$var->id}}" method="post">
                         @csrf

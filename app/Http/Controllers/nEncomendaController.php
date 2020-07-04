@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Clientes;
 use App\nEncomenda;
+use App\User;
 use Illuminate\Http\Request;
 
 class nEncomendaController extends Controller
@@ -27,7 +28,7 @@ class nEncomendaController extends Controller
      */
     public function create()
     {
-        $cli = Clientes::select()->get();
+        $cli = User::select()->get();
         return view("nencomenda.create")->with(compact('cli'));
     }
 
@@ -72,7 +73,7 @@ class nEncomendaController extends Controller
     public function edit($id)
     {
         $var = nEncomenda::findorfail($id);
-        $cli = Clientes::select()->get();
+        $cli = User::select()->get();
         return View("nencomenda/edit")->with(compact('var','cli'));
     }
 

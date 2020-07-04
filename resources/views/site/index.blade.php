@@ -24,7 +24,8 @@ http://www.tooplate.com/view/2099-scenic
     <link href="{{ asset('css/magnific-popup.css') }}" rel="stylesheet">
     <link href="{{ asset('css/owl.carousel.css') }}" rel="stylesheet">
     <link href="{{ asset('css/tooplate-style.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('css/parallax.css')}}">
+    <link href="{{asset('css/parallax.css')}}" rel="stylesheet" >
+    <script src="https://kit.fontawesome.com/532898e56b.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -155,7 +156,15 @@ http://www.tooplate.com/view/2099-scenic
 
                <div class="col-md-offset-2 col-md-8 col-sm-12">
                     <!-- Mapa -->
-
+                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d978.6013525157157!2d-8.523883270749515!3d38.95964364155096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd19010b4d2b57b3%3A0xc2a679490ee20aab!2zRHVhcnRlIENvbXVuaWNhw6fDtWVz!5e1!3m2!1spt-PT!2spt!4v1593830025284!5m2!1spt-PT!2spt"
+                           width="600"
+                           height="450"
+                           frameborder="0"
+                           style="border:0;"
+                           allowfullscreen=""
+                           aria-hidden="false"
+                           tabindex="0">
+                   </iframe>
                </div>
 
           </div>

@@ -5,7 +5,7 @@
 
         <section class="ready__started project__form">
             <div class="container">
-                <h3 class="text-center">Editar Status</h3>
+                <h3 class="text-center">Editar Produto</h3>
                 <div class="ready__started-box">
                     <form class="main__form" action="/produto/{{$var->id}}" method="post">
                         @csrf

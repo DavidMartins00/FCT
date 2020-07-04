@@ -5,7 +5,7 @@
 
         <section class="ready__started project__form">
             <div class="container">
-                <h3 class="text-center">Editar Reparações</h3>
+                <h3 class="text-center">Editar Nota Encomenda</h3>
                 <div class="ready__started-box">
                     <form class="main__form" action="/nencomenda/{{$var->id}}" method="post">
                         @csrf
@@ -22,7 +22,7 @@
                                 <div class="form-group">
                                     <select class="form-control" name="idCliente" id="idCliente" style="height: 60px" >
                                         @foreach ($cli as $i)
-                                            <option value="{{$i->id}}">{{$i->nome}}</option>
+                                            <option value="{{$i->id}}">{{$i->name}}</option>
                                         @endforeach
                                     </select>
                                     <label for="role">Cliente</label>

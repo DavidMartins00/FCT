@@ -6,6 +6,7 @@ use App\Clientes;
 use App\Reparacoes;
 use App\repExt;
 use App\Status;
+use App\User;
 use Illuminate\Http\Request;
 
 class ReparacoesController extends Controller
@@ -29,7 +30,7 @@ class ReparacoesController extends Controller
      */
     public function create()
     {
-        $cli = Clientes::select()->get();
+        $cli = User::select()->get();
         $stat = Status::select()->get();
         $rep = repExt::select()->get();
         return view("reparacoes.create")->with(compact('cli','stat','rep'));
@@ -90,7 +91,7 @@ class ReparacoesController extends Controller
     public function edit($id)
     {
         $rep = Reparacoes::findorfail($id);
-        $cli = Clientes::select()->get();
+        $cli = User::select()->get();
         $stat = Status::select()->get();
         $repx = repExt::select()->get();
         return View("reparacoes/edit")->with(compact('rep','cli','stat','repx'));
