@@ -48,7 +48,7 @@ http://www.tooplate.com/view/2099-scenic
                     <span class="icon icon-bar"></span>
                </button>
                <!-- lOGO -->
-               <a href="index.blade.php" class="navbar-brand" ></a>
+               <a href="index.blade.php" class="navbar-brand"></a>
           </div>
 
           <!-- MENU LINKS -->

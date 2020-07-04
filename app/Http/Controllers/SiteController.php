@@ -17,6 +17,7 @@ use App\Status;
 use App\Substituto;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class SiteController extends Controller
 {
@@ -82,4 +83,11 @@ class SiteController extends Controller
     {
         return view('backoffice/anuncios');
     }
+
+    public function repar()
+    {
+        $rep = Reparacoes::where("idCliente", "LIKE", Auth::id())->get();
+        return view('site/repar')->with(compact('rep'));
+    }
+
 }

@@ -12,13 +12,5 @@ class Clientes extends Model
         return $this->belongsTo('App\User', 'user_id');
     }
 
-    public function nEncomenda()
-    {
-        return $this->hasMany('App\nEncomenda');
-    }
 
-    public function Reparacoes()
-    {
-        return $this->hasMany('App\Reparacoes');
-    }
 }

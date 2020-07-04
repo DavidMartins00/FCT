@@ -101,11 +101,6 @@ class ClientesController extends Controller
         $data = $request->all();
         $request->validate([
             'nome' => 'required|max:255',
-            'telefone' => 'required|max:255',
-            'nif' => 'required|max:255',
-            'localidade' => 'required|max:255',
-            'morada' => 'required|max:255',
-            'codpost' => 'required|max:255',
             'user_id' => 'required|max:255',
         ]);
 

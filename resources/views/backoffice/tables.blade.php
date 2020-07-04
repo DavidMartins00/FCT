@@ -7,52 +7,7 @@
     <link rel="stylesheet" href="{{asset('assetsTabel/css/bootstrap.css')}}">
     <link rel="stylesheet" href="{{asset('AssetsTabelF/css/css.css')}}">
     <!------ Include the above in your HEAD tag ---------->
-    <!------ Clientes ---------->
     <div class="container">
-        <div class="row">
-            <div class="panel panel-primary filterable">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Clientes</h3>
-                    <div class="pull-right">
-                        <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
-                    </div>
-                </div>
-                <table class="table">
-                    <thead>
-                    <tr class="filters">
-                        <th><input type="text" class="form-control" placeholder="ID" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Nome" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Telefone" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="NIF" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Localidade" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Morada" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Codigo Postal" disabled></th>
-                        <th class="text-center ">Ação</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    @forelse ($cli as $var)
-                        <tr>
-
-                            <td>{{$var->id}}</td>
-                            <td>{{$var->nome}}</td>
-                            <td>{{$var->telefone}}</td>
-                            <td>{{$var->nif}}</td>
-                            <td>{{$var->localidade}}</td>
-                            <td>{{$var->morada}}</td>
-                            <td>{{$var->codpost}}</td>
-                            <td>{{$var->user->name}}</td>
-
-
-                            <td class="text-center"><a class='btn btn-info btn-xs' href="/cliente/{{$var->id}}/edit">Edit</a> <form action="/cliente/{{$var->id}}" style="margin:1px" method="post"> @csrf @method('delete') <input type="submit" name="" class="btn btn-danger btn-xs" value="Del"> </form></td>
-                        </tr>
-                    @empty
-
-                    @endforelse
-                    </tbody>
-                </table>
-            </div>
-        </div>
         <!------ Produtos ---------->
         <div class="row">
             <div class="panel panel-primary filterable">
@@ -184,17 +139,28 @@
                         <th><input type="text" class="form-control" placeholder="Nome" disabled></th>
                         <th><input type="text" class="form-control" placeholder="Email" disabled></th>
                         <th><input type="text" class="form-control" placeholder="Role" disabled></th>
+                        <th><input type="text" class="form-control" placeholder="Telefone" disabled></th>
+                        <th><input type="text" class="form-control" placeholder="NIF" disabled></th>
+                        <th><input type="text" class="form-control" placeholder="Localidade" disabled></th>
+                        <th><input type="text" class="form-control" placeholder="Morada" disabled></th>
+                        <th><input type="text" class="form-control" placeholder="Codigo Postal" disabled></th>
                         <th class="text-center ">Ação</th>
                     </tr>
                     </thead>
                     <tbody>
-                    @forelse ($usr as $user)
+                    @forelse ($usr as $var)
                         <tr>
-                            <td>{{$user->id}}</td>
-                            <td>{{$user->name}}</td>
-                            <td>{{$user->email}}</td>
-                            <td>{{$user->role}}</td>
-                            <td class="text-center"><a class='btn btn-info btn-xs' href="/user/{{$user->id}}/edit">Edit</a> <form action="/user/{{$user->id}}" style="margin:1px" method="post"> @csrf @method('delete') <input type="submit" name="" class="btn btn-danger btn-xs" value="Del"> </form></td>
+                            <td>{{$var->id}}</td>
+                            <td>{{$var->name}}</td>
+                            <td>{{$var->email}}</td>
+                            <td>{{$var->role}}</td>
+                            <td>{{$var->telefone}}</td>
+                            <td>{{$var->nif}}</td>
+                            <td>{{$var->localidade}}</td>
+                            <td>{{$var->morada}}</td>
+                            <td>{{$var->codpost}}</td>
+
+                            <td class="text-center"><a class='btn btn-info btn-xs' href="/user/{{$var->id}}/edit">Edit</a> <form action="/user/{{$var->id}}" style="margin:1px" method="post"> @csrf @method('delete') <input type="submit" name="" class="btn btn-danger btn-xs" value="Del"> </form></td>
                         </tr>
                     @empty
 

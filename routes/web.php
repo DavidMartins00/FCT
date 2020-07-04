@@ -23,6 +23,8 @@ Route::get('/admin', 'SiteController@admin');
 Route::get('/func', 'SiteController@func');
 Route::get('/ger', 'SiteController@ger');
 Route::get('/menu', 'SiteController@menu');
+Route::get('/repar', 'SiteController@repar');
+
 
 Route::resource('user','UserController');
 Route::resource('fornecedores','FornecedoresController');

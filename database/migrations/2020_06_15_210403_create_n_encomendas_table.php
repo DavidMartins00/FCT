@@ -21,7 +21,7 @@ class CreateNEncomendasTable extends Migration
 
             $table->timestamps();
 
-            $table->foreign('idCliente')->references('id')->on('clientes');
+            $table->foreign('idCliente')->references('id')->on('users');
         });
     }
 

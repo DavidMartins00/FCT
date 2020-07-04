@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class nEncomenda extends Model
 {
-    public function cliente()
+    public function User()
     {
-        return $this->belongsTo('App\Clientes', 'idCliente');
+        return $this->belongsTo('App\User', 'idCliente');
     }
 
     public function PEncomenda()

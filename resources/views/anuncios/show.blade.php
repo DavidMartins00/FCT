@@ -3,7 +3,7 @@
         <div style="text-align: center;">
                 <img src="{{$var->img}}">
                 <h3>Nome: {{$var->nome}}</h3>
-                <h5>Preço: {{$var->preco}}</h5>
+                <h5>Preço: {{$var->preco}}€</h5>
                 <p>Descrição:</p>
                 <p>{{$var->desc}}</p>
                 <div class="row">

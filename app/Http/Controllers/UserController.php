@@ -32,7 +32,7 @@ class UserController extends Controller
 
     public function login()
     {
-        
+
     }
 
     /**
@@ -65,8 +65,8 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        $user = User::findorfail($id);
-        return View("user/edit")->with(compact('user'));
+        $var = User::findorfail($id);
+        return View("user/edit")->with(compact('var'));
     }
 
     /**
@@ -85,6 +85,11 @@ class UserController extends Controller
             'email' => 'required', 'string', 'email', 'max:255', 'unique:user',
             'password' =>'sometimes','string',
             'role' =>'sometimes','string',
+            'telefone' => 'sometimes',
+            'nif' => 'sometimes',
+            'localidade' => 'sometimes',
+            'morada' => 'sometimes',
+            'codpost' => 'sometimes',
         ]);
 
         User::where(['id'=>$id])->update([
@@ -92,9 +97,14 @@ class UserController extends Controller
             'email'=>$data['email'],
             'password'=>Hash::make($data['password']),
             'role'=>$data['role'],
+            'telefone' => $data['telefone'],
+            'nif' => $data['nif'],
+            'localidade' => $data['localidade'],
+            'morada' => $data['morada'],
+            'codpost' => $data['codpost'],
         ]);
 
-        return Redirect('/user')->with('fm_success','Utilizador alterado com sucesso!!');
+        return Redirect('/tables')->with('fm_success','Utilizador alterado com sucesso!!');
     }
 
     /**

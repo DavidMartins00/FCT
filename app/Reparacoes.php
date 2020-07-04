@@ -11,9 +11,9 @@ class Reparacoes extends Model
         return $this->hasMany('App\Intervencao');
     }
 
-    public function Clientes()
+    public function User()
     {
-        return $this->belongsTo('App\Clientes', 'idCliente');
+        return $this->belongsTo('App\User', 'idCliente');
     }
 
     public function Status()

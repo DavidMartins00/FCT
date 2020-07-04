@@ -29,7 +29,7 @@ class CreateReparacoesTable extends Migration
             $table->double('valor');
             $table->timestamps();
 
-            $table->foreign('idCliente')->references('id')->on('clientes');
+            $table->foreign('idCliente')->references('id')->on('users');
             $table->foreign('idStatus')->references('id')->on('statuses');
             $table->foreign('idRepExt')->references('id')->on('rep_exts');
         });
