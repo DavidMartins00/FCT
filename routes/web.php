@@ -18,34 +18,36 @@ Route::get('/', 'SiteController@home');
 Route::get('/home', 'SiteController@home')->name('/');
 Auth::routes();
 
+Route::group(['middleware' => ['auth']], function () {
 
-Route::get('/admin', 'SiteController@admin');
-Route::get('/func', 'SiteController@func');
-Route::get('/ger', 'SiteController@ger');
-Route::get('/menu', 'SiteController@menu');
-Route::get('/repar', 'SiteController@repar');
-Route::resource('perfil','SiteController');
+    Route::get('/repar', 'SiteController@repar');
+    Route::resource('perfil', 'SiteController');
+
+    Route::group(['middleware' => ['func']], function () {
+        Route::resource('status', 'StatusController');
+        Route::resource('fornecedores', 'FornecedoresController');
+        Route::resource('produto', 'ProdutosController');
+        Route::resource('reparacoes', 'ReparacoesController');
+        Route::resource('operadora', 'OperadorasController');
+        Route::resource('nencomenda', 'nEncomendaController');
+        Route::resource('pencomenda', 'PEncomendaController');
+        Route::resource('substituto', 'SubstitutoController');
+
+        Route::group(['middleware' => ['ger']], function () {
+            Route::resource('user', 'UserController');
+            Route::resource('contrato', 'ContratosController');
+            Route::resource('anuncio', 'AnuncioController');
+            Route::resource('intervencao', 'IntervencaoController');
+            Route::resource('repext', 'repExtController');
 
 
-Route::resource('user','UserController');
-Route::resource('fornecedores','FornecedoresController');
-Route::resource('contrato','ContratosController');
-Route::resource('produto','ProdutosController');
-Route::resource('operadora','OperadorasController');
-Route::resource('reparacoes','ReparacoesController');
-Route::resource('substituto','SubstitutoController');
-Route::resource('status','StatusController');
-Route::resource('intervencao','IntervencaoController');
-Route::resource('nencomenda','nEncomendaController');
-Route::resource('pencomenda','PEncomendaController');
-Route::resource('repext','repExtController');
-Route::resource('anuncio','AnuncioController');
-
-Route::get('/back', 'SiteController@back');
-Route::get('/profile', 'SiteController@profile');
-Route::get('/tables', 'SiteController@tables');
-Route::get('/publicidade', 'SiteController@publicidade');
-
+            Route::group(['middleware' => ['admin']], function () {
+                Route::get('/back', 'SiteController@back');
+                Route::get('/tables', 'SiteController@tables');
+            });
+        });
+    });
+});
 
 
 

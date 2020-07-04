@@ -65,6 +65,6 @@ class Kernel extends HttpKernel
 
         'admin' => \App\Http\Middleware\Admin::class,
         'func' => \App\Http\Middleware\Func::class,
-        'Ger' => \App\Http\Middleware\Ger::class,
+        'ger' => \App\Http\Middleware\Ger::class,
     ];
 }
