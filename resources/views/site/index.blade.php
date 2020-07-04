@@ -64,17 +64,21 @@ http://www.tooplate.com/view/2099-scenic
                            </a>
 
                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                               <a style="color: black" class="nav-link dropdown-toggle" href="/perfil">Perfil</a>
+                               <a style="color: black" class="nav-link dropdown-toggle" href="/repar">Reparações</a>
                                <a style="color: black" class="dropdown-item" href="{{ route('logout') }}"
                                   onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                    {{ __('Logout') }}
                                </a>
 
+
                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                    @csrf
                                </form>
                            </div>
                        </li>
+
                    @endguest
                </ul>
           </div>

@@ -15,8 +15,8 @@
                                 <div class="row">
                                     <div class="col-md-5">
                                         <div class="form-group">
-                                            <label class="bmd-label-floating">Nome de Utilizador</label>
-                                            <input type="text" class="form-control">
+                                            <label class="bmd-label-floating">Nome</label>
+                                            <input type="text" name="name" id="name" class="form-control">
                                         </div>
                                     </div>
                                     <div class="col-md-7">

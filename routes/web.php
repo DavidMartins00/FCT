@@ -14,8 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', 'SiteController@index');
-Route::get('/home', 'SiteController@index')->name('/');
+Route::get('/', 'SiteController@home');
+Route::get('/home', 'SiteController@home')->name('/');
 Auth::routes();
 
 
@@ -24,6 +24,7 @@ Route::get('/func', 'SiteController@func');
 Route::get('/ger', 'SiteController@ger');
 Route::get('/menu', 'SiteController@menu');
 Route::get('/repar', 'SiteController@repar');
+Route::resource('perfil','SiteController');
 
 
 Route::resource('user','UserController');

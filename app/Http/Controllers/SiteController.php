@@ -17,6 +17,7 @@ use App\Substituto;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class SiteController extends Controller
 {
@@ -40,7 +41,7 @@ class SiteController extends Controller
         return view('site/func');
     }
 
-    public function index()
+    public function home()
     {
         $ad = Anuncio::where("vis", "LIKE", "1")->get();
         return view('site/index')->with(compact('ad'));
@@ -52,10 +53,49 @@ class SiteController extends Controller
         return view('backoffice/mainpage');
     }
 
-    public function profile()
+    public function index()
     {
-        return view('backoffice/userprofile');
+        $id = Auth::id();
+        $var = User::findorfail($id);
+        return view('site/perfil')->with(compact('var'));
     }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        $data = $request->all();
+
+        $request->validate([
+            'name' => 'required', 'string', 'max:255',
+            'email' => 'required', 'string', 'email', 'max:255', 'unique:user',
+            'password' =>'sometimes','string',
+            'telefone' => 'sometimes',
+            'nif' => 'sometimes',
+            'localidade' => 'sometimes',
+            'morada' => 'sometimes',
+            'codpost' => 'sometimes',
+        ]);
+
+        User::where(['id'=>$id])->update([
+            'name'=>$data['name'],
+            'email'=>$data['email'],
+            'password'=>Hash::make($data['password']),
+            'telefone' => $data['telefone'],
+            'nif' => $data['nif'],
+            'localidade' => $data['localidade'],
+            'morada' => $data['morada'],
+            'codpost' => $data['codpost'],
+        ]);
+
+        return Redirect('/')->with('fm_success','Utilizador alterado com sucesso!!');
+    }
+
 
     public function tables()
     {

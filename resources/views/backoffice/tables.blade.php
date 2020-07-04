@@ -452,7 +452,7 @@
                         <tr>
                             <td>{{$var->id}}</td>
                             <td>{{$var->data}}</td>
-                            <td>{{$var->cliente->nome}}</td>
+                            <td>{{$var->User->name}}</td>
 
                             <td class="text-center"><a class='btn btn-info btn-xs' href="/nencomenda/{{$var->id}}/edit">Edit</a> <form action="/nencomenda/{{$var->id}}" style="margin:1px" method="post"> @csrf @method('delete') <input type="submit" name="" class="btn btn-danger btn-xs" value="Del"> </form></td>
                         </tr>
@@ -550,7 +550,7 @@
                     @forelse ($repx as $var)
                         <tr>
                             <td>{{$var->id}}</td>
-                            <td>{{$var->Clientes->nome}}</td>
+                            <td>{{$var->User->name}}</td>
                             <td>{{$var->contacto}}</td>
                             <td>{{$var->marca}}</td>
                             <td>{{$var->modelo}}</td>
