@@ -107,7 +107,7 @@ http://www.tooplate.com/view/2099-scenic
                <div class="col-md-offset-2 col-md-8 col-sm-12">
                     <!-- SECTION TITLE -->
                     <div class="section-title">
-                         <h1>Discontos</h1>
+                         <h1>Descontos</h1>
                     </div>
                </div>
 
@@ -126,7 +126,7 @@ http://www.tooplate.com/view/2099-scenic
                        </div>
                    @empty
                        <div style="text-align: center;">
-                       <h1>Sem discontos</h1>
+                       <h1>Sem descontos</h1>
                        </div>
                    @endforelse
                </div>

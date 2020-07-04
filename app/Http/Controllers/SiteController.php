@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Anuncio;
-use App\Clientes;
 use App\Contratos;
 use App\Fornecedores;
 use App\Intervencao;
@@ -61,7 +60,6 @@ class SiteController extends Controller
     public function tables()
     {
 
-        $cli = Clientes::select()->get();
         $stat = Status::select()->get();
         $rep = repExt::select()->get();
         $repx = Reparacoes::select()->get();
@@ -76,7 +74,7 @@ class SiteController extends Controller
         $usr = User::select()->get();
         $ad = Anuncio::select()->get();
 
-        return view("backoffice.tables")->with(compact('cli','stat','rep','repx','ctr','for','int','nenc','op','pen','pro','sub','usr','ad'));
+        return view("backoffice.tables")->with(compact('stat','rep','repx','ctr','for','int','nenc','op','pen','pro','sub','usr','ad'));
     }
 
     public function publicidade()
