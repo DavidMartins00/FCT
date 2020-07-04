@@ -1,10 +1,10 @@
 .filterable {
     margin-top: 150px;
-    margin-left: 300px;
+    margin-left: 180px;
 }
 .filterable .panel-heading .pull-right {
     margin-top: -20px;
-    margin-left: 800px;
+    margin-left: auto;
 }
 .filterable .filters input[disabled] {
 
@@ -23,4 +23,8 @@
 }
 .filterable .filters input[disabled]:-ms-input-placeholder {
     color: #333;
+}
+.button
+{
+left: 50px;
 }

@@ -13,8 +13,18 @@
             <div class="panel panel-primary filterable">
                 <div class="panel-heading">
                     <h3 class="panel-title">Produtos</h3>
-                    <div class="pull-right">
-                        <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
+                    <div class="pull-center">
+                        <div class="row">
+                            <div class="col-md-1">
+                                <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
+                            </div>
+                            <div class="col-md-1">
+
+                            </div>
+                            <div class="col-md-1">
+                                <a class="btn btn-default btn-xs" href="produto/create">Adicionar</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <table class="table">
@@ -54,8 +64,18 @@
             <div class="panel panel-primary filterable">
                 <div class="panel-heading">
                     <h3 class="panel-title">Operadoras</h3>
-                    <div class="pull-right">
-                        <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
+                    <div class="pull-center">
+                        <div class="row">
+                            <div class="col-md-1">
+                                <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
+                            </div>
+                            <div class="col-md-1">
+
+                            </div>
+                            <div class="col-md-1">
+                                <a class="btn btn-default btn-xs" href="operadora/create">Adicionar</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <table class="table">
@@ -89,8 +109,18 @@
             <div class="panel panel-primary filterable">
                 <div class="panel-heading">
                     <h3 class="panel-title">Substitutos</h3>
-                    <div class="pull-right">
-                        <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
+                    <div class="pull-center">
+                        <div class="row">
+                            <div class="col-md-1">
+                                <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
+                            </div>
+                            <div class="col-md-1">
+
+                            </div>
+                            <div class="col-md-1">
+                                <a class="btn btn-default btn-xs" href="substituto/create">Adicionar</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <table class="table">
@@ -125,10 +155,11 @@
             <div class="panel panel-primary filterable">
                 <div class="panel-heading">
                     <h3 class="panel-title">Users</h3>
-                    <div class="pull-right">
+                    <div class="pull-center">
                         <div class="row">
-                        <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
-                        <button class="btn btn-default btn-xs btn-filter">Adicionar</button>
+                            <div class="col-md-1">
+                                <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -174,9 +205,19 @@
             <div class="panel panel-primary filterable">
                 <div class="panel-heading">
                     <h3 class="panel-title">Fornecedores</h3>
-                    <div class="pull-right">
-                        <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
-                    </div>
+                        <div class="pull-center">
+                        <div class="row">
+                            <div class="col-md-1">
+                                <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
+                            </div>
+                            <div class="col-md-1">
+
+                            </div>
+                            <div class="col-md-1">
+                                <a class="btn btn-default btn-xs" href="fornecedores/create">Adicionar</a>
+                            </div>
+                        </div>
+                     </div>
                 </div>
                 <table class="table">
                     <thead>
@@ -219,9 +260,19 @@
             <div class="panel panel-primary filterable">
                 <div class="panel-heading">
                     <h3 class="panel-title">Contratos</h3>
-                    <div class="pull-right">
-                        <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
-                    </div>
+                      <div class="pull-center">
+                        <div class="row">
+                            <div class="col-md-1">
+                                <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
+                            </div>
+                            <div class="col-md-1">
+
+                            </div>
+                            <div class="col-md-1">
+                                <a class="btn btn-default btn-xs" href="contrato/create">Adicionar</a>
+                            </div>
+                        </div>
+                      </div>
                 </div>
                 <table class="table">
                     <thead>
@@ -279,8 +330,18 @@
             <div class="panel panel-primary filterable">
                 <div class="panel-heading">
                     <h3 class="panel-title">Status</h3>
-                    <div class="pull-right">
-                        <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
+                    <div class="pull-center">
+                        <div class="row">
+                            <div class="col-md-1">
+                                <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
+                            </div>
+                            <div class="col-md-1">
+
+                            </div>
+                            <div class="col-md-1">
+                                <a class="btn btn-default btn-xs" href="status/create">Adicionar</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <table class="table">
@@ -311,8 +372,18 @@
             <div class="panel panel-primary filterable">
                 <div class="panel-heading">
                     <h3 class="panel-title">Reparadores</h3>
-                    <div class="pull-right">
-                        <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
+                    <div class="pull-center">
+                        <div class="row">
+                            <div class="col-md-1">
+                                <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
+                            </div>
+                            <div class="col-md-1">
+
+                            </div>
+                            <div class="col-md-1">
+                                <a class="btn btn-default btn-xs" href="repext/create">Adicionar</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <table class="table">
@@ -353,8 +424,18 @@
             <div class="panel panel-primary filterable">
                 <div class="panel-heading">
                     <h3 class="panel-title">Nota Encomenda</h3>
-                    <div class="pull-right">
-                        <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
+                    <div class="pull-center">
+                        <div class="row">
+                            <div class="col-md-1">
+                                <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
+                            </div>
+                            <div class="col-md-1">
+
+                            </div>
+                            <div class="col-md-1">
+                                <a class="btn btn-default btn-xs" href="nencomenda/create">Adicionar</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <table class="table">
@@ -387,8 +468,18 @@
             <div class="panel panel-primary filterable">
                 <div class="panel-heading">
                     <h3 class="panel-title">Produtos Encomenda</h3>
-                    <div class="pull-right">
-                        <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
+                    <div class="pull-center">
+                        <div class="row">
+                            <div class="col-md-1">
+                                <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
+                            </div>
+                            <div class="col-md-1">
+
+                            </div>
+                            <div class="col-md-1">
+                                <a class="btn btn-default btn-xs" href="pencomenda/create">Adicionar</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <table class="table">
@@ -425,8 +516,18 @@
             <div class="panel panel-primary filterable">
                 <div class="panel-heading">
                     <h3 class="panel-title">Reparações</h3>
-                    <div class="pull-right">
-                        <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
+                    <div class="pull-center">
+                        <div class="row">
+                            <div class="col-md-1">
+                                <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
+                            </div>
+                            <div class="col-md-1">
+
+                            </div>
+                            <div class="col-md-1">
+                                <a class="btn btn-default btn-xs" href="reparacoes/create">Adicionar</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <table class="table">
@@ -473,8 +574,18 @@
             <div class="panel panel-primary filterable">
                 <div class="panel-heading">
                     <h3 class="panel-title">Intervenções</h3>
-                    <div class="pull-right">
-                        <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
+                    <div class="pull-center">
+                        <div class="row">
+                            <div class="col-md-1">
+                                <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
+                            </div>
+                            <div class="col-md-1">
+
+                            </div>
+                            <div class="col-md-1">
+                                <a class="btn btn-default btn-xs" href="intervencao/create">Adicionar</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <table class="table">
@@ -507,8 +618,18 @@
             <div class="panel panel-primary filterable">
                 <div class="panel-heading">
                     <h3 class="panel-title">Anuncios</h3>
-                    <div class="pull-right">
-                        <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
+                    <div class="pull-center">
+                        <div class="row">
+                            <div class="col-md-1">
+                                <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
+                            </div>
+                            <div class="col-md-1">
+
+                            </div>
+                            <div class="col-md-1">
+                                <a class="btn btn-default btn-xs" href="anuncio/create">Adicionar</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <table class="table">

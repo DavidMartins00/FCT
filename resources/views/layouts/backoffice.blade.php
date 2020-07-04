@@ -21,7 +21,6 @@
 <body>
 <div class="wrapper ">
     @include('backoffice/includes/sidebar_back')
-    @include('backoffice/includes/nav_pag')
     <main>
         @yield('contentB')
     </main>
