@@ -29,7 +29,6 @@ Route::get('/repar', 'SiteController@repar');
 Route::resource('user','UserController');
 Route::resource('fornecedores','FornecedoresController');
 Route::resource('contrato','ContratosController');
-Route::resource('cliente','ClientesController');
 Route::resource('produto','ProdutosController');
 Route::resource('operadora','OperadorasController');
 Route::resource('reparacoes','ReparacoesController');
