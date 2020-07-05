@@ -35,7 +35,21 @@ http://www.tooplate.com/view/2099-scenic
           <span class="sk-inner-circle"></span>
      </div>
 </div>
+<style>
+    .parallax {
+        /* The image used */
+        background-image: url("img/phone.jpg");
 
+        /* Set a specific height */
+        min-height: 500px;
+
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
 
 <!-- MENU -->
 <div class="navbar custom-navbar navbar-fixed-top" role="navigation">
@@ -88,6 +102,7 @@ http://www.tooplate.com/view/2099-scenic
 </div>
 <!-- HOME -->
 <section id="home" class="parallax">
+
      <div class="overlay"></div>
      <div class="container">
           <div class="row">
