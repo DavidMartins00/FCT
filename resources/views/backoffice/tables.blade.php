@@ -153,62 +153,62 @@
         <!------ Users ---------->
         @if(Auth::user()->role == "Ger" or Auth::user()->role == "Admin")
 
-        <div class="row">
-            <div class="panel panel-primary filterable">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Users</h3>
-                    <div class="pull-center">
-                        <div class="row">
-                            <div class="col-md-1">
-                                <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
+            <div class="row">
+                <div class="panel panel-primary filterable">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Users</h3>
+                        <div class="pull-center">
+                            <div class="row">
+                                <div class="col-md-1">
+                                    <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <table class="table">
-                    <thead>
-                    <tr class="filters">
-                        <th><input type="text" class="form-control" placeholder="ID" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Nome" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Email" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Role" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Telefone" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="NIF" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Localidade" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Morada" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Codigo Postal" disabled></th>
-                        <th class="text-center ">Ação</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    @forelse ($usr as $var)
-                        <tr>
-                            <td>{{$var->id}}</td>
-                            <td>{{$var->name}}</td>
-                            <td>{{$var->email}}</td>
-                            <td>{{$var->role}}</td>
-                            <td>{{$var->telefone}}</td>
-                            <td>{{$var->nif}}</td>
-                            <td>{{$var->localidade}}</td>
-                            <td>{{$var->morada}}</td>
-                            <td>{{$var->codpost}}</td>
-
-                            <td class="text-center"><a class='btn btn-info btn-xs' href="/user/{{$var->id}}/edit">Edit</a> <form action="/user/{{$var->id}}" style="margin:1px" method="post"> @csrf @method('delete') <input type="submit" name="" class="btn btn-danger btn-xs" value="Del"> </form></td>
+                    <table class="table">
+                        <thead>
+                        <tr class="filters">
+                            <th><input type="text" class="form-control" placeholder="ID" disabled></th>
+                            <th><input type="text" class="form-control" placeholder="Nome" disabled></th>
+                            <th><input type="text" class="form-control" placeholder="Email" disabled></th>
+                            <th><input type="text" class="form-control" placeholder="Role" disabled></th>
+                            <th><input type="text" class="form-control" placeholder="Telefone" disabled></th>
+                            <th><input type="text" class="form-control" placeholder="NIF" disabled></th>
+                            <th><input type="text" class="form-control" placeholder="Localidade" disabled></th>
+                            <th><input type="text" class="form-control" placeholder="Morada" disabled></th>
+                            <th><input type="text" class="form-control" placeholder="Codigo Postal" disabled></th>
+                            <th class="text-center ">Ação</th>
                         </tr>
-                    @empty
+                        </thead>
+                        <tbody>
+                        @forelse ($usr as $var)
+                            <tr>
+                                <td>{{$var->id}}</td>
+                                <td>{{$var->name}}</td>
+                                <td>{{$var->email}}</td>
+                                <td>{{$var->role}}</td>
+                                <td>{{$var->telefone}}</td>
+                                <td>{{$var->nif}}</td>
+                                <td>{{$var->localidade}}</td>
+                                <td>{{$var->morada}}</td>
+                                <td>{{$var->codpost}}</td>
 
-                    @endforelse
-                    </tbody>
-                </table>
+                                <td class="text-center"><a class='btn btn-info btn-xs' href="/user/{{$var->id}}/edit">Edit</a> <form action="/user/{{$var->id}}" style="margin:1px" method="post"> @csrf @method('delete') <input type="submit" name="" class="btn btn-danger btn-xs" value="Del"> </form></td>
+                            </tr>
+                        @empty
+
+                        @endforelse
+                        </tbody>
+                    </table>
+                </div>
             </div>
-        </div>
-         @endif
-        <!------ Fornecedores ---------->
+        @endif
+    <!------ Fornecedores ---------->
         <div class="row">
             <div class="panel panel-primary filterable">
                 <div class="panel-heading">
                     <h3 class="panel-title">Fornecedores</h3>
-                        <div class="pull-center">
+                    <div class="pull-center">
                         <div class="row">
                             <div class="col-md-1">
                                 <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
@@ -220,7 +220,7 @@
                                 <a class="btn btn-default btn-xs" href="fornecedores/create">Adicionar</a>
                             </div>
                         </div>
-                     </div>
+                    </div>
                 </div>
                 <table class="table">
                     <thead>
@@ -260,77 +260,77 @@
         </div>
         <!------ Contratos ---------->
         @if(Auth::user()->role == "Ger" or Auth::user()->role == "Admin")
-        <div class="row">
-            <div class="panel panel-primary filterable">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Contratos</h3>
-                      <div class="pull-center">
-                        <div class="row">
-                            <div class="col-md-1">
-                                <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
-                            </div>
-                            <div class="col-md-1">
+            <div class="row">
+                <div class="panel panel-primary filterable">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Contratos</h3>
+                        <div class="pull-center">
+                            <div class="row">
+                                <div class="col-md-1">
+                                    <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
+                                </div>
+                                <div class="col-md-1">
 
-                            </div>
-                            <div class="col-md-1">
-                                <a class="btn btn-default btn-xs" href="contrato/create">Adicionar</a>
+                                </div>
+                                <div class="col-md-1">
+                                    <a class="btn btn-default btn-xs" href="contrato/create">Adicionar</a>
+                                </div>
                             </div>
                         </div>
-                      </div>
-                </div>
-                <table class="table">
-                    <thead>
-                    <tr class="filters">
-                        <th><input type="text" class="form-control" placeholder="ID" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Operadora" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Nome" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Data Activação" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="NIF" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Agendado" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Instalado" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Ok/NãoOk" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Tarifario" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Instalado/Nos" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Valors/Iva" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Valor do IVA" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Valor c/IVA Receber" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Recebido" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Entrega Comercial" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Documentos" disabled></th>
-                        <th class="text-center ">Ação</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    @forelse ($ctr as $var)
-                        <tr>
-                            <td>{{$var->id}}</td>
-                            <td>{{$var->op_id}}</td>
-                            <td>{{$var->nif}}</td>
-                            <td>{{$var->nome}}</td>
-                            <td>{{$var->dataativ}}</td>
-                            <td>{{$var->agendado}}</td>
-                            <td>{{$var->instalado}}</td>
-                            <td>{{$var->oknok}}</td>
-                            <td>{{$var->tarifario}}</td>
-                            <td>{{$var->instaladoPNos}}</td>
-                            <td>{{$var->valsIva}}</td>
-                            <td>{{$var->valIva}}</td>
-                            <td>{{$var->valIvaR}}</td>
-                            <td>{{$var->recebido}}</td>
-                            <td>{{$var->contEntregue}}</td>
-                            <td>{{$var->doc}}</td>
-
-                            <td class="text-center"><a class='btn btn-info btn-xs' href="/contrato/{{$var->id}}/edit">Edit</a> <form action="/contrato/{{$var->id}}" style="margin:1px" method="post"> @csrf @method('delete') <input type="submit" name="" class="btn btn-danger btn-xs" value="Del"> </form></td>
+                    </div>
+                    <table class="table">
+                        <thead>
+                        <tr class="filters">
+                            <th><input type="text" class="form-control" placeholder="ID" disabled></th>
+                            <th><input type="text" class="form-control" placeholder="Operadora" disabled></th>
+                            <th><input type="text" class="form-control" placeholder="Nome" disabled></th>
+                            <th><input type="text" class="form-control" placeholder="Data Activação" disabled></th>
+                            <th><input type="text" class="form-control" placeholder="NIF" disabled></th>
+                            <th><input type="text" class="form-control" placeholder="Agendado" disabled></th>
+                            <th><input type="text" class="form-control" placeholder="Instalado" disabled></th>
+                            <th><input type="text" class="form-control" placeholder="Ok/NãoOk" disabled></th>
+                            <th><input type="text" class="form-control" placeholder="Tarifario" disabled></th>
+                            <th><input type="text" class="form-control" placeholder="Instalado/Nos" disabled></th>
+                            <th><input type="text" class="form-control" placeholder="Valors/Iva" disabled></th>
+                            <th><input type="text" class="form-control" placeholder="Valor do IVA" disabled></th>
+                            <th><input type="text" class="form-control" placeholder="Valor c/IVA Receber" disabled></th>
+                            <th><input type="text" class="form-control" placeholder="Recebido" disabled></th>
+                            <th><input type="text" class="form-control" placeholder="Entrega Comercial" disabled></th>
+                            <th><input type="text" class="form-control" placeholder="Documentos" disabled></th>
+                            <th class="text-center ">Ação</th>
                         </tr>
-                    @empty
+                        </thead>
+                        <tbody>
+                        @forelse ($ctr as $var)
+                            <tr>
+                                <td>{{$var->id}}</td>
+                                <td>{{$var->op_id}}</td>
+                                <td>{{$var->nif}}</td>
+                                <td>{{$var->nome}}</td>
+                                <td>{{$var->dataativ}}</td>
+                                <td>{{$var->agendado}}</td>
+                                <td>{{$var->instalado}}</td>
+                                <td>{{$var->oknok}}</td>
+                                <td>{{$var->tarifario}}</td>
+                                <td>{{$var->instaladoPNos}}</td>
+                                <td>{{$var->valsIva}}</td>
+                                <td>{{$var->valIva}}</td>
+                                <td>{{$var->valIvaR}}</td>
+                                <td>{{$var->recebido}}</td>
+                                <td>{{$var->contEntregue}}</td>
+                                <td>{{$var->doc}}</td>
 
-                    @endforelse
-                    </tbody>
-                </table>
+                                <td class="text-center"><a class='btn btn-info btn-xs' href="/contrato/{{$var->id}}/edit">Edit</a> <form action="/contrato/{{$var->id}}" style="margin:1px" method="post"> @csrf @method('delete') <input type="submit" name="" class="btn btn-danger btn-xs" value="Del"> </form></td>
+                            </tr>
+                        @empty
+
+                        @endforelse
+                        </tbody>
+                    </table>
+                </div>
             </div>
-        </div>
         @endif
-        <!------ Status ---------->
+    <!------ Status ---------->
         <div class="row">
             <div class="panel panel-primary filterable">
                 <div class="panel-heading">
@@ -374,59 +374,59 @@
         </div>
         <!------ Reparadores ---------->
         @if(Auth::user()->role == "Ger" or Auth::user()->role == "Admin")
-        <div class="row">
-            <div class="panel panel-primary filterable">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Reparadores</h3>
-                    <div class="pull-center">
-                        <div class="row">
-                            <div class="col-md-1">
-                                <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
-                            </div>
-                            <div class="col-md-1">
+            <div class="row">
+                <div class="panel panel-primary filterable">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Reparadores</h3>
+                        <div class="pull-center">
+                            <div class="row">
+                                <div class="col-md-1">
+                                    <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
+                                </div>
+                                <div class="col-md-1">
 
-                            </div>
-                            <div class="col-md-1">
-                                <a class="btn btn-default btn-xs" href="repext/create">Adicionar</a>
+                                </div>
+                                <div class="col-md-1">
+                                    <a class="btn btn-default btn-xs" href="repext/create">Adicionar</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <table class="table">
-                    <thead>
-                    <tr class="filters">
-                        <th><input type="text" class="form-control" placeholder="ID" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Nome" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Morada" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Codigo Postal" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Localidades" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Contribuinte" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Contactos" disabled></th>
-                        <th class="text-center ">Ação</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    @forelse ($rep as $var)
-                        <tr>
-                            <td>{{$var->id}}</td>
-                            <td>{{$var->nome}}</td>
-                            <td>{{$var->morada}}</td>
-                            <td>{{$var->cdpost}}</td>
-                            <td>{{$var->localidade}}</td>
-                            <td>{{$var->contrib}}</td>
-                            <td>{{$var->contacto}}</td>
-
-                            <td class="text-center"><a class='btn btn-info btn-xs' href="/nencomenda/{{$var->id}}/edit">Edit</a> <form action="/nencomenda/{{$var->id}}" style="margin:1px" method="post"> @csrf @method('delete') <input type="submit" name="" class="btn btn-danger btn-xs" value="Del"> </form></td>
+                    <table class="table">
+                        <thead>
+                        <tr class="filters">
+                            <th><input type="text" class="form-control" placeholder="ID" disabled></th>
+                            <th><input type="text" class="form-control" placeholder="Nome" disabled></th>
+                            <th><input type="text" class="form-control" placeholder="Morada" disabled></th>
+                            <th><input type="text" class="form-control" placeholder="Codigo Postal" disabled></th>
+                            <th><input type="text" class="form-control" placeholder="Localidades" disabled></th>
+                            <th><input type="text" class="form-control" placeholder="Contribuinte" disabled></th>
+                            <th><input type="text" class="form-control" placeholder="Contactos" disabled></th>
+                            <th class="text-center ">Ação</th>
                         </tr>
-                    @empty
+                        </thead>
+                        <tbody>
+                        @forelse ($rep as $var)
+                            <tr>
+                                <td>{{$var->id}}</td>
+                                <td>{{$var->nome}}</td>
+                                <td>{{$var->morada}}</td>
+                                <td>{{$var->cdpost}}</td>
+                                <td>{{$var->localidade}}</td>
+                                <td>{{$var->contrib}}</td>
+                                <td>{{$var->contacto}}</td>
 
-                    @endforelse
-                    </tbody>
-                </table>
+                                <td class="text-center"><a class='btn btn-info btn-xs' href="/nencomenda/{{$var->id}}/edit">Edit</a> <form action="/nencomenda/{{$var->id}}" style="margin:1px" method="post"> @csrf @method('delete') <input type="submit" name="" class="btn btn-danger btn-xs" value="Del"> </form></td>
+                            </tr>
+                        @empty
+
+                        @endforelse
+                        </tbody>
+                    </table>
+                </div>
             </div>
-        </div>
         @endif
-        <!------ Nota Encomenda ---------->
+    <!------ Nota Encomenda ---------->
         <div class="row">
             <div class="panel panel-primary filterable">
                 <div class="panel-heading">
@@ -578,106 +578,106 @@
         </div>
         <!------ Intervenções ---------->
         @if(Auth::user()->role == "Ger" or Auth::user()->role == "Admin")
-        <div class="row">
-            <div class="panel panel-primary filterable">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Intervenções</h3>
-                    <div class="pull-center">
-                        <div class="row">
-                            <div class="col-md-1">
-                                <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
-                            </div>
-                            <div class="col-md-1">
+            <div class="row">
+                <div class="panel panel-primary filterable">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Intervenções</h3>
+                        <div class="pull-center">
+                            <div class="row">
+                                <div class="col-md-1">
+                                    <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
+                                </div>
+                                <div class="col-md-1">
 
-                            </div>
-                            <div class="col-md-1">
-                                <a class="btn btn-default btn-xs" href="intervencao/create">Adicionar</a>
+                                </div>
+                                <div class="col-md-1">
+                                    <a class="btn btn-default btn-xs" href="intervencao/create">Adicionar</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <table class="table">
-                    <thead>
-                    <tr class="filters">
-                        <th><input type="text" class="form-control" placeholder="ID" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Reparações" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Intervenções" disabled></th>
-                        <th class="text-center ">Ação</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    @forelse ($int as $var)
-                        <tr>
-                            <td>{{$var->id}}</td>
-                            <td>{{$var->interv}}</td>
-                            <td>{{$var->idRep}}</td>
-
-                            <td class="text-center"><a class='btn btn-info btn-xs' href="/intervencao/{{$var->id}}/edit">Edit</a> <form action="/intervencao/{{$var->id}}" style="margin:1px" method="post"> @csrf @method('delete') <input type="submit" name="" class="btn btn-danger btn-xs" value="Del"> </form></td>
+                    <table class="table">
+                        <thead>
+                        <tr class="filters">
+                            <th><input type="text" class="form-control" placeholder="ID" disabled></th>
+                            <th><input type="text" class="form-control" placeholder="Reparações" disabled></th>
+                            <th><input type="text" class="form-control" placeholder="Intervenções" disabled></th>
+                            <th class="text-center ">Ação</th>
                         </tr>
-                    @empty
+                        </thead>
+                        <tbody>
+                        @forelse ($int as $var)
+                            <tr>
+                                <td>{{$var->id}}</td>
+                                <td>{{$var->interv}}</td>
+                                <td>{{$var->idRep}}</td>
 
-                    @endforelse
-                    </tbody>
-                </table>
+                                <td class="text-center"><a class='btn btn-info btn-xs' href="/intervencao/{{$var->id}}/edit">Edit</a> <form action="/intervencao/{{$var->id}}" style="margin:1px" method="post"> @csrf @method('delete') <input type="submit" name="" class="btn btn-danger btn-xs" value="Del"> </form></td>
+                            </tr>
+                        @empty
+
+                        @endforelse
+                        </tbody>
+                    </table>
+                </div>
             </div>
-        </div>
         @endif
-        <!------ Anuncios ---------->
+    <!------ Anuncios ---------->
         @if(Auth::user()->role == "Ger" or Auth::user()->role == "Admin")
-        <div class="row">
-            <div class="panel panel-primary filterable">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Anuncios</h3>
-                    <div class="pull-center">
-                        <div class="row">
-                            <div class="col-md-1">
-                                <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
-                            </div>
-                            <div class="col-md-1">
+            <div class="row">
+                <div class="panel panel-primary filterable">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Anuncios</h3>
+                        <div class="pull-center">
+                            <div class="row">
+                                <div class="col-md-1">
+                                    <button class="btn btn-default btn-xs btn-filter">Filtrar</button>
+                                </div>
+                                <div class="col-md-1">
 
-                            </div>
-                            <div class="col-md-1">
-                                <a class="btn btn-default btn-xs" href="anuncio/create">Adicionar</a>
+                                </div>
+                                <div class="col-md-1">
+                                    <a class="btn btn-default btn-xs" href="anuncio/create">Adicionar</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <table class="table">
-                    <thead>
-                    <tr class="filters">
-                        <th><input type="text" class="form-control" placeholder="ID" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Nome" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Preço" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Descrição" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Visivel" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Imagem" disabled></th>
-                        <th class="text-center ">Ação</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    @forelse ($ad as $var)
-                        <tr>
-                            <td>{{$var->id}}</td>
-                            <td>{{$var->nome}}</td>
-                            <td>{{$var->preco}}€</td>
-                            <td>{{$var->desc}}</td>
-                            <td>@if($var->vis == 1)
-                                Sim
-                                @else
-                                Não
-                                @endif
-                            </td>
-                            <td><img src="{{$var->img}}" height="50px" width="auto"></td>
-
-                            <td class="text-center"><a class='btn btn-info btn-xs' href="/anuncio/{{$var->id}}/edit">Edit</a> <form action="/anuncio/{{$var->id}}" style="margin:1px" method="post"> @csrf @method('delete') <input type="submit" name="" class="btn btn-danger btn-xs" value="Del"> </form></td>
+                    <table class="table">
+                        <thead>
+                        <tr class="filters">
+                            <th><input type="text" class="form-control" placeholder="ID" disabled></th>
+                            <th><input type="text" class="form-control" placeholder="Nome" disabled></th>
+                            <th><input type="text" class="form-control" placeholder="Preço" disabled></th>
+                            <th><input type="text" class="form-control" placeholder="Descrição" disabled></th>
+                            <th><input type="text" class="form-control" placeholder="Visivel" disabled></th>
+                            <th><input type="text" class="form-control" placeholder="Imagem" disabled></th>
+                            <th class="text-center ">Ação</th>
                         </tr>
-                    @empty
+                        </thead>
+                        <tbody>
+                        @forelse ($ad as $var)
+                            <tr>
+                                <td>{{$var->id}}</td>
+                                <td>{{$var->nome}}</td>
+                                <td>{{$var->preco}}€</td>
+                                <td>{{$var->desc}}</td>
+                                <td>@if($var->vis == 1)
+                                        Sim
+                                    @else
+                                        Não
+                                    @endif
+                                </td>
+                                <td><img src="{{$var->img}}" height="50px" width="auto"></td>
 
-                    @endforelse
-                    </tbody>
-                </table>
+                                <td class="text-center"><a class='btn btn-info btn-xs' href="/anuncio/{{$var->id}}/edit">Edit</a> <form action="/anuncio/{{$var->id}}" style="margin:1px" method="post"> @csrf @method('delete') <input type="submit" name="" class="btn btn-danger btn-xs" value="Del"> </form></td>
+                            </tr>
+                        @empty
+
+                        @endforelse
+                        </tbody>
+                    </table>
+                </div>
             </div>
-        </div>
     </div>
     @endif
 @endsection
