@@ -14,9 +14,7 @@ class IntervencaoController extends Controller
      */
     public function index()
     {
-        return view('intervencao.index',[
-            'int' => Intervencao::orderBy('id')->paginate(10)
-        ]);
+        return Redirect('/tables');
     }
 
     /**

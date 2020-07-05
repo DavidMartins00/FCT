@@ -14,9 +14,7 @@ class ProdutosController extends Controller
      */
     public function index()
     {
-        return view('produtos.index',[
-            'pro' => Produtos::orderBy('id')->paginate(10)
-        ]);
+        return Redirect('/tables');
     }
 
     /**

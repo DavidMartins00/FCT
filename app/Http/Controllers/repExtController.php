@@ -14,9 +14,7 @@ class repExtController extends Controller
      */
     public function index()
     {
-        return view('repext.index',[
-            'rep' => repExt::orderBy('id')->paginate(10)
-        ]);
+        return Redirect('/tables');
     }
 
     /**

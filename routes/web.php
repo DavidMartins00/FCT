@@ -32,6 +32,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::resource('nencomenda', 'nEncomendaController');
         Route::resource('pencomenda', 'PEncomendaController');
         Route::resource('substituto', 'SubstitutoController');
+        Route::get('/tables', 'SiteController@tables');
     });
 
     Route::group(['middleware' => ['ger']], function () {
@@ -41,7 +42,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::resource('intervencao', 'IntervencaoController');
         Route::resource('repext', 'repExtController');
         Route::get('/back', 'SiteController@back');
-        Route::get('/tables', 'SiteController@tables');
+
     });
 });
 

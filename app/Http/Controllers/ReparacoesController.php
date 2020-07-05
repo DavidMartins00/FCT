@@ -18,9 +18,7 @@ class ReparacoesController extends Controller
      */
     public function index()
     {
-        return view('reparacoes.index',[
-            'rep' => Reparacoes::orderBy('id')->paginate(10)
-        ]);
+        return Redirect('/tables');
     }
 
     /**

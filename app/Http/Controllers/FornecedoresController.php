@@ -14,9 +14,7 @@ class FornecedoresController extends Controller
      */
     public function index()
     {
-        return view('fornecedores.index',[
-            'fornec' => Fornecedores::orderBy('id')->paginate(10)
-        ]);
+        return Redirect('/tables');
     }
 
     /**

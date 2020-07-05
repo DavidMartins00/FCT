@@ -14,9 +14,7 @@ class ContratosController extends Controller
      */
     public function index()
     {
-        return view('contratos.index',[
-            'contr' => Contratos::orderBy('id')->paginate(10)
-        ]);
+        return Redirect('/tables');
     }
 
     /**

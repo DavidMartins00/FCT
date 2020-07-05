@@ -14,9 +14,7 @@ class OperadorasController extends Controller
      */
     public function index()
     {
-        return view('operadoras.index',[
-            'op' => Operadoras::orderBy('id')->paginate(10)
-        ]);
+        return Redirect('/tables');
     }
 
     /**

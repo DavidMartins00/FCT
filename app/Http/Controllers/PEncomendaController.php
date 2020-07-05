@@ -14,9 +14,7 @@ class PEncomendaController extends Controller
      */
     public function index()
     {
-        return view('pencomenda.index',[
-            'pen' => PEncomenda::orderBy('id')->paginate(10)
-        ]);
+        return Redirect('/tables');
     }
 
     /**

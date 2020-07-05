@@ -16,9 +16,7 @@ class nEncomendaController extends Controller
      */
     public function index()
     {
-        return view('nencomenda.index',[
-            'nen' => nEncomenda::orderBy('id')->paginate(10)
-        ]);
+        return Redirect('/tables');
     }
 
     /**

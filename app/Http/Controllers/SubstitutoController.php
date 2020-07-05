@@ -14,9 +14,7 @@ class SubstitutoController extends Controller
      */
     public function index()
     {
-        return view('substituto.index',[
-            'sub' => Substituto::orderBy('id')->paginate(10)
-        ]);
+        return Redirect('/tables');
     }
 
     /**
