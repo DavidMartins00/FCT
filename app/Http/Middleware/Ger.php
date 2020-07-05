@@ -24,6 +24,9 @@ class Ger
         if (Auth::user()->role == "Ger") {
             return $next($request);
         }
+        elseif(Auth::user()->role == "Admin"){
+            return $next($request);
+        }
         else{
             return redirect()->route('/');
         }
