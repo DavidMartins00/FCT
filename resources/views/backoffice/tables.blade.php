@@ -151,6 +151,8 @@
             </div>
         </div>
         <!------ Users ---------->
+        @if(Auth::user()->role == "Ger" or Auth::user()->role == "Admin")
+
         <div class="row">
             <div class="panel panel-primary filterable">
                 <div class="panel-heading">
@@ -200,6 +202,7 @@
                 </table>
             </div>
         </div>
+         @endif
         <!------ Fornecedores ---------->
         <div class="row">
             <div class="panel panel-primary filterable">
@@ -256,6 +259,7 @@
             </div>
         </div>
         <!------ Contratos ---------->
+        @if(Auth::user()->role == "Ger" or Auth::user()->role == "Admin")
         <div class="row">
             <div class="panel panel-primary filterable">
                 <div class="panel-heading">
@@ -325,6 +329,7 @@
                 </table>
             </div>
         </div>
+        @endif
         <!------ Status ---------->
         <div class="row">
             <div class="panel panel-primary filterable">
@@ -368,6 +373,7 @@
             </div>
         </div>
         <!------ Reparadores ---------->
+        @if(Auth::user()->role == "Ger" or Auth::user()->role == "Admin")
         <div class="row">
             <div class="panel panel-primary filterable">
                 <div class="panel-heading">
@@ -419,6 +425,7 @@
                 </table>
             </div>
         </div>
+        @endif
         <!------ Nota Encomenda ---------->
         <div class="row">
             <div class="panel panel-primary filterable">
@@ -570,6 +577,7 @@
             </div>
         </div>
         <!------ Intervenções ---------->
+        @if(Auth::user()->role == "Ger" or Auth::user()->role == "Admin")
         <div class="row">
             <div class="panel panel-primary filterable">
                 <div class="panel-heading">
@@ -613,7 +621,9 @@
                 </table>
             </div>
         </div>
+        @endif
         <!------ Anuncios ---------->
+        @if(Auth::user()->role == "Ger" or Auth::user()->role == "Admin")
         <div class="row">
             <div class="panel panel-primary filterable">
                 <div class="panel-heading">
@@ -669,4 +679,5 @@
             </div>
         </div>
     </div>
+    @endif
 @endsection
